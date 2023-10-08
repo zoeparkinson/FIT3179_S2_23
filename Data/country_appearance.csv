@@ -1,6 +1,6 @@
 Country,Count
 Spain,14
-England,33
+United Kingdom,33
 Sweden,47
 Australia,33
 France,24
@@ -15,7 +15,7 @@ South Africa,7
 United States of America,53
 Switzerland,8
 Norway,44
-Korea Republic,13
+South Korea,13
 Germany,47
 Italy,15
 Argentina,12
@@ -24,10 +24,10 @@ Panama,3
 Vietnam,3
 Portugal,3
 Haiti,3
-China PR,36
+China,36
 Costa Rica,6
 Zambia,3
-Republic of Ireland,3
+Ireland,3
 Canada,30
 New Zealand,18
 Philippines,3
@@ -39,7 +39,7 @@ Mexico,9
 Ecuador,3
 Côte d'Ivoire,3
 Equatorial Guinea,3
-Korea DPR,13
+North Korea,13
 Ghana,9
 Russia,8
 United States,1
