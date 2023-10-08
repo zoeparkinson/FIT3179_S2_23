@@ -4,7 +4,7 @@
 	"width": 700,
 	"height": 300,
 	"data": {
-	  "url": "matches_id.csv"
+	  "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/matches_id.csv"
 	},
 	"params": [
 	  {
