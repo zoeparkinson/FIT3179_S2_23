@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Number of games played in FIFA Women's World Cup 1991-2023",
-  "width": 800,
-  "height": 800,
+  "width": 600,
+  "height": 600,
   "background": null,
   "projection": {"type": "mercator"},
   "data": {
