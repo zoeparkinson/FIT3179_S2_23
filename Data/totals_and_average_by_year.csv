@@ -1,4 +1,4 @@
-Year,Total_goals_scored,Total_penalties_scored,Average_goals_per_game
+Year,total_score,total_penalty,average_score_per_game
 1991,99,0,3.81
 1995,99,7,3.81
 1999,122,18,3.81
