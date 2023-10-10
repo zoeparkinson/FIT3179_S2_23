@@ -162,3 +162,16 @@ body {
 	/*height: 1000px;
 	width: 800px;*/
 }
+
+#avg_score {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	padding: 20px;
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	/*height: 1000px;
+	width: 800px;*/
+}

@@ -223,10 +223,7 @@
         "name": "groupSelector",
         "value": false,
         "on": [
-          {
-            "events": "@groupMark:click!",
-            "update": "{stack:datum.stack, Team:datum.stack=='Team' && datum.grpId, Year:datum.stack=='Year' && datum.grpId}"
-          },
+          
           {
             "events": [
               {"type": "click", "markname": "groupReset"},

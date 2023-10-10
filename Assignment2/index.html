@@ -102,6 +102,43 @@
   </div>
 </div>
 
+
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <div id="avg_score"></div>
+  </div>
+  <div class="pure-u-1-2">
+    <p>
+        <br>
+          <br>
+          <br>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. 
+          <br>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolor
+          <br>
+          <br>
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. 
+          <br>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolor
+          <br>
+          <br>
+  </div>
+</div>
+
+
+
 </div>
 <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 <script type="text/javascript">
@@ -147,6 +184,13 @@
 
   // Embed the Vega-Lite visualization in the "map" div
   vegaEmbed('#penalty_line', spec2).then(function(result) {
+  }).catch(console.error);
+
+
+  var spec2 = "avg_score.json";
+
+  // Embed the Vega-Lite visualization in the "map" div
+  vegaEmbed('#avg_score', spec2).then(function(result) {
   }).catch(console.error);
 
 

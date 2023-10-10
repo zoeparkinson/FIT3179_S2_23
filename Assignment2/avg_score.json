@@ -1,11 +1,11 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of matches played across each World Cup",
+    "title": "Average score per game per year",
 	"height":400,
 	"width": "container",
 	"background": "rgba(255, 255, 255, 0.8)",
 	"data": {
-		"url": "Data/totals_and_average_by_year.csv"
+		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/totals_and_average_by_year.csv"
 	},
 	"mark": {
 		"type": "line",
@@ -18,7 +18,7 @@
 
 	"encoding": {
 		"x": { "field": "Year", "type": "nominal" },
-		"y": { "field": "average_score_per_game", "type": "quantitative" },
+		"y": { "field": "average_score_per_game", "type": "quantitative", "title":"Average score per game per year"},
 		"color": { "value": "#0a8f01" },
 
 		"tooltip": [
