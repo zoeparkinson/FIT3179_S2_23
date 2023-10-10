@@ -1,0 +1,28 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Number of penalties in each world cup",
+	"height": 400,
+	"width": "container",
+	"data": {
+		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/totals_by_year.csv"
+	},
+	"mark": {
+		"type": "line",
+		"point": {
+			"filled": true,
+			"fill": "#0a8f01",
+            "size": 70
+		}
+	},
+
+	"encoding": {
+		"x": { "field": "Year", "type": "nominal" },
+		"y": { "field": "total_penalty", "type": "quantitative" , "title": "Number penalties scored"},
+		"color": { "value": "#0a8f01" },
+
+		"tooltip": [
+			{ "field": "Year", "title": "Year" },
+			{ "field": "total_penalty", "title": "Total number of penalites scored" }
+		]
+	}
+}

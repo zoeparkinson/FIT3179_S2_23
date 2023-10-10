@@ -1,0 +1,28 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Number of matches played across each World Cup",
+	"height":400,
+	"width": "container",
+	"data": {
+		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/world_cup_women.csv"
+	},
+	"mark": {
+		"type": "line",
+		"point": {
+			"filled": true,
+			"fill": "#0a8f01",
+            "size": 70
+		}
+	},
+
+	"encoding": {
+		"x": { "field": "Year", "type": "nominal" },
+		"y": { "field": "Matches", "type": "quantitative" },
+		"color": { "value": "#0a8f01" },
+
+		"tooltip": [
+			{ "field": "Year", "title": "Year" },
+			{ "field": "Matches", "title": "Number of Matches" }
+		]
+	}
+}

@@ -1,0 +1,94 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": "All games played in a FIFA Women's World Cup 1991-2023",
+	"width": "container",
+	"height": 300,
+	
+	"data": {
+	  "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/matches_id.csv"
+	},
+	"params": [
+	  {
+		"name": "Year_selection",
+		"bind": {
+		  "input": "select",
+		  "options": [
+			null,
+			2023,
+			2019,
+			2015,
+			2011,
+			2007,
+			2003,
+			1999,
+			1995,
+			1991
+		  ],
+		  "labels": [
+			"Show All",
+			"2023",
+			"2019",
+			"2015",
+			"2011",
+			"2007",
+			"2003",
+			"1999",
+			"1995",
+			"1991"
+		  ],
+		  "name": "Year Selection: "
+		}
+	  }
+	],
+	"transform": [
+	  {
+		"window": [{ "op": "row_number", "as": "MatchNumber" }],
+		"groupby": ["Year"]
+	  },
+	  {"filter": "Year_selection == null || datum.Year == Year_selection"},
+	  { "calculate": "datum.MatchNumber - 1", "as": "MatchIndex" }
+	],
+	"layer": [
+	  {
+		"mark": { "type": "rect" },
+		"encoding": {
+		  "y": {
+			"field": "Year",
+			"type": "ordinal",
+			"axis": { "title": "Year", "orient": "left" }
+		  },
+		  "x": {
+			"field": "id",
+			"sort": "ascending",
+			"type": "quantitative",
+			"axis": {
+			  "title": null,
+			  "ticks": false,
+			  "labels": false
+			  
+			}
+			
+		  },
+		  "color": {
+			"field": "Attendance",
+			"type": "quantitative",
+			"scale": { "scheme": "greens" }
+		  },
+		  "tooltip": [
+			{ "field": "home_team", "title": "Home Team" },
+			{ "field": "away_team", "title": "Away Team" },
+			{ "field": "Score", "title": "Score" },
+			{ "field": "Date", "timeUnit": "yearmonthdate","title": "Date" },
+			{ "field": "Attendance", "title": "Attendance" }
+		  ]
+		}
+	  }
+	  
+	],
+	"config": {
+	  "view": { "stroke": "white" },
+	  "axisX": { "domain": false },
+	  "axisY": { "domain": false }
+	}
+  }
+  

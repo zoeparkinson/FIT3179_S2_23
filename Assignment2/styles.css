@@ -1,0 +1,164 @@
+body {
+	background-image: url("pitch.jpeg");
+	margin: 50px;
+	border: 10px solid rgba(255, 255, 255);	
+	padding: 20px;
+	
+
+	}
+
+	h1 {
+		font-size: 72px;
+		line-height: 40px;
+		color: white;
+		text-align:center;
+		font-family: Arial;
+		line-height: normal;
+	}
+
+	h2 {
+		
+		line-height: 40px;
+		color: white;
+		text-align:center;
+		font-family: Arial;
+		line-height: normal;
+	}
+
+	p{
+		
+		line-height: 40px;
+		color: white;
+		
+		font-family: Arial;
+		line-height: normal;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 30%;
+		padding-top: 20px;
+	  }
+
+	.description-left {
+		padding-right: 20px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: white;
+	}
+
+	.vis-container {
+		width: 100%;
+	}
+	.pure-g {
+		margin-bottom: 40px;
+	}
+	
+
+#main {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	padding: 20px;
+	margin: 10px;;
+
+}
+
+#map {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#heatmap {
+	/* top:10px;
+	bottom: 100px;  */
+	/* left: 200px;
+	right: 200px; */
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	margin: 10px;
+	width: 100%;
+	background-color: white;
+	
+	
+	/* height: 1000px;
+	width: 800px; */
+}
+
+#sankey {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	
+	
+	/*height: 1000px;
+	width: 800px;*/
+}
+#bar {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#line {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	padding: 20px;
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#line_score {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	padding: 20px;
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#penalty_line {
+	/* top:10px;
+	bottom: 100px; 
+	left: 100px;
+	right: 400px; */
+	padding: 20px;
+	justify-content: center;
+	display: flex;
+	font-family: Arial, Helvetica, sans-serif;
+	/*height: 1000px;
+	width: 800px;*/
+}

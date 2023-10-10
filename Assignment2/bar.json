@@ -1,0 +1,40 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": "Number of goals scored by the top scorer in each World Cup",
+	"height":400,
+	"width": "container",
+	"data": {
+		"values": [
+			{ "Year": "2023", "NumGoals": 5, "TopScorer": "Hinata Miyazawa (JP) " },
+			{ "Year": "2019", "NumGoals": 6, "TopScorer": "Alex Morgan (US), Megan Rapinoe (US) and Ellen White (UK)" },
+			{ "Year": "2015", "NumGoals": 6, "TopScorer": "Célia Šašić (DE) and Carli Lloyd (US)"},
+			{ "Year": "2011", "NumGoals": 5, "TopScorer": "Homare Sawa (JP)" },
+			{ "Year": "2007", "NumGoals": 7, "TopScorer": "Marta (BR)" },
+			{ "Year": "2003", "NumGoals": 7, "TopScorer": "Birgit Prinz (DE)" },
+			{ "Year": "1999", "NumGoals": 7, "TopScorer": "Sun Wen (CN) and Sissi (BR)" },
+			{ "Year": "1995", "NumGoals": 6, "TopScorer": "Ann Kristin Aarønes (NO)" },
+      { "Year": "1991", "NumGoals": 10, "TopScorer": "Aichelle Akers (US)" }
+		]
+	},
+	"mark": "bar",
+	"encoding": {
+    "color": {"value": "#0a8f01"},
+		"x": {
+			"field": "Year",
+			"type": "ordinal",
+			"axis": { "labelAngle": 0 },
+			"title": "Year"
+		},
+		"y": {
+			"field": "NumGoals",
+			"type": "quantitative",
+			"title": "Number of goals scored"
+		},
+    "tooltip": [
+			{ "field": "Year", "title": "Year" },
+      { "field": "NumGoals", "title": "Number of goals scored" }, 
+      { "field": "TopScorer", "title": "Top Scorer(s)" }
+		]
+    
+	}
+}

@@ -1,0 +1,42 @@
+[
+    {
+      "Round": "Round 1",
+      "Matches": [
+        {
+          "Matchup": "Match 1",
+          "Team1": "Team A",
+          "Team2": "Team B",
+          "Winner": "Team A"
+        },
+        {
+          "Matchup": "Match 2",
+          "Team1": "Team C",
+          "Team2": "Team D",
+          "Winner": "Team D"
+        }
+      ]
+    },
+    {
+      "Round": "Round 2",
+      "Matches": [
+        {
+          "Matchup": "Match 3",
+          "Team1": "Team A",
+          "Team2": "Team D",
+          "Winner": "Team A"
+        }
+      ]
+    },
+    {
+      "Round": "Round 3",
+      "Matches": [
+        {
+          "Matchup": "Match 4",
+          "Team1": "Team A",
+          "Team2": "Team E",
+          "Winner": "Team E"
+        }
+      ]
+    }
+  ]
+  
