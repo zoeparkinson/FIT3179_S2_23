@@ -3,6 +3,7 @@
     "title": "Number of goals scored in each world cup",
 	"height":400,
 	"width": "container",
+	"background": "rgba(255, 255, 255, 0.8)",
 	"data": {
 		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/totals_by_year.csv"
 	},

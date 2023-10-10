@@ -3,6 +3,7 @@
 	"title": "Number of goals scored by the top scorer in each World Cup",
 	"height":400,
 	"width": "container",
+	"background": "rgba(255, 255, 255, 0.8)",
 	"data": {
 		"values": [
 			{ "Year": "2023", "NumGoals": 5, "TopScorer": "Hinata Miyazawa (JP) " },

@@ -3,6 +3,7 @@
   "title": "Number of games played in FIFA Women's World Cup 1991-2023",
   "width": 800,
   "height": 600,
+  "background": "rgba(255, 255, 255, 0.8)",
   
   
   "projection": {"type": "mercator"},
