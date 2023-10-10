@@ -1,0 +1,29 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Number of matches played across each World Cup",
+	"height":400,
+	"width": "container",
+	"background": "rgba(255, 255, 255, 0.8)",
+	"data": {
+		"url": "Data/totals_and_average_by_year.csv"
+	},
+	"mark": {
+		"type": "line",
+		"point": {
+			"filled": true,
+			"fill": "#0a8f01",
+            "size": 70
+		}
+	},
+
+	"encoding": {
+		"x": { "field": "Year", "type": "nominal" },
+		"y": { "field": "average_score_per_game", "type": "quantitative" },
+		"color": { "value": "#0a8f01" },
+
+		"tooltip": [
+			{ "field": "Year", "title": "Year" },
+			{ "field": "average_score_per_game", "title": "Average goals per game" }
+		]
+	}
+}
