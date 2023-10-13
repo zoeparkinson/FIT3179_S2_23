@@ -3,7 +3,7 @@
   "title": "Number of games played in FIFA Women's World Cup 1991-2023",
   "width": 800,
   "height": 600,
-  "background": "rgba(255, 255, 255, 0.8)",
+  "background": null,
   
   
   "projection": {"type": "mercator"},
@@ -57,6 +57,23 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": { "stroke": "transparent" },
+    "title": {"color": "white", "fontSize": 30},
+    "axis": {
+      "titleColor": "white" ,
+      "titleFontSize": 15,
+      "labelColor": "white",
+      "labelFontSize": 13,
+      "gridColor": "black"
+ 
+    },
+    "legend": { "titleColor": "white" ,
+    "titleFontSize": 15,
+    "labelColor": "white",
+    "labelFontSize": 13,
+  "padding":50}
+  }
 }
 

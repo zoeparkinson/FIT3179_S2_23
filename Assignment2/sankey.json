@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.2.json",
-    "height": 300,
-    "width": 600,
+    "height": 400,
+    "width": 800,
     
     "title": "Past winners",
-    "background": "rgba(255, 255, 255, 0.8)",
+    "background": null,
     "data": [
       {
         "name": "rawData",
@@ -192,9 +192,13 @@
         "type": "text",
         "from": {"data": "groups"},
         "encode": {
+          "enter":{
+          "fill": {"value": "white"},
+          "fontSize": {"value": 15}
+        },
           "update": {
             "x": {
-              "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') + 6 : -6)"
+              "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') +6 : -6)"
             },
             "yc": {"signal": "(datum.scaledY0 + datum.scaledY1)/2"},
             "align": {"signal": "datum.rightLabel ? 'left' : 'right'"},
@@ -204,6 +208,7 @@
               "signal": "datum.grpId"
             }
           }
+         
         }
       }
     ],
@@ -233,6 +238,25 @@
           }
         ]
       }
-    ]
+    ],
+    "config": {
+      "view": { "stroke": "transparent" },
+      "axisX": { "domain": false },
+      "axisY": { "domain": false },
+      "title": {"color": "white", "fontSize": 29},
+      "axis": {
+        "titleColor": "white" ,
+        "titleFontSize": 15,
+        "labelColor": "white",
+        "labelFontSize": 13,
+        "gridColor": "black"
+   
+      },
+      "legend": { "titleColor": "white" ,
+      "titleFontSize": 15,
+      "labelColor": "white",
+      "labelFontSize": 13}
+    
+    }
   }
   

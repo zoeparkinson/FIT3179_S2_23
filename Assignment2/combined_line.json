@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of goals scored in each world cup",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/totals_and_average_by_year.csv"
+  },
+  "transform": [
+    {"calculate": "replace(datum.full_total, '_', ' ')", "as": "Regular goal"},
+    {"calculate": "replace(datum.total_penalty, '_', ' ')", "as": "Penalty"}, 
+    {"calculate": "replace(datum.average_score_per_game, '_', ' ')", "as": "Average per game"}
+  ],
+  "repeat": { "layer": ["Regular goal", "Penalty"] },
+  "spec": {
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "x": { "field": "Year", "type": "nominal" },
+          "y": {
+            "field": {"repeat": "layer"},
+            "type": "quantitative",
+            "title": "Goals scored"
+          },
+          "color": {
+            "datum": {"repeat": "layer"},
+            "type": "nominal",
+            "legend": {"title": "Goal type"},
+            "scale": {
+              "domain": ["Regular goal", "Penalty"],
+              "range": ["#0a8f01", "#046dc9"]
+            }
+          },
+          "tooltip": [
+            {"field": "Year", "title": "Year"},
+            {"field": "full_total", "title": "Regular goal"},
+            {"field": "total_score", "title": "Regular goals scored"},
+            {"field": "total_penalty", "title": "Penalty goals scored"}
+          ]
+        }
+      }
+    ]
+  },
+  "config": {
+    "background": null,
+    "view": { "stroke": "transparent" },
+    "title": {"color": "white", "fontSize": 30},
+    "axis": {
+      "titleColor": "white" ,
+      "titleFontSize": 15,
+      "labelColor": "white",
+      "labelFontSize": 13,
+      "gridColor": "#454242"
+ 
+    },
+    "legend": { "titleColor": "white" ,
+    "titleFontSize": 15,
+    "labelColor": "white",
+    "labelFontSize": 13}
+  }
+}

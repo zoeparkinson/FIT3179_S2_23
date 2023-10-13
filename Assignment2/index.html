@@ -28,6 +28,7 @@
     <div class="pure-u-1-3">
       <div class="description description-left">
         <h2>History of the FIFA Women's World Cup</h2>
+       
         <p>The first column contains text and the second column contains a visualisation.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -136,62 +137,76 @@
           <br>
   </div>
 </div>
-
-
-
 </div>
+
+<div id = "combined_line"> </div>
+
+
+<div id = "goal_scatter"> </div>
+
 <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 <script type="text/javascript">
   // Reference your Vega-Lite specification file
   var spec2 = "map.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#map', spec2).then(function(result) {
+  vegaEmbed('#map', spec2, { "actions": false, "padding": 20 }).then(function(result) {
   }).catch(console.error);
 
   // Reference your Vega-Lite specification file
   var spec2 = "heatmap.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#heatmap', spec2).then(function(result) {
+  vegaEmbed('#heatmap', spec2, { "actions": false , "padding": 20}).then(function(result) {
   }).catch(console.error);
 
   var spec2 = "sankey.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#sankey', spec2).then(function(result) {
+  vegaEmbed('#sankey', spec2, { "actions": false, "padding": 20 }).then(function(result) {
   }).catch(console.error);
 
   var spec2 = "bar.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#bar', spec2).then(function(result) {
+  vegaEmbed('#bar', spec2, { "actions": false , "padding": 20}).then(function(result) {
   }).catch(console.error);
 
   var spec2 = "line.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#line', spec2).then(function(result) {
+  vegaEmbed('#line', spec2, { "actions": false , "padding": 20}).then(function(result) {
   }).catch(console.error);
 
   var spec2 = "score_line.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#line_score', spec2).then(function(result) {
+  vegaEmbed('#line_score', spec2, { "actions": false, "padding": 20 }).then(function(result) {
   }).catch(console.error);
 
   var spec2 = "penalty_line.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#penalty_line', spec2).then(function(result) {
+  vegaEmbed('#penalty_line', spec2, { "actions": false , "padding": 20}).then(function(result) {
   }).catch(console.error);
 
 
-  var spec2 = "avg_score.json";
+
+  var spec2 = "combined_line.json";
 
   // Embed the Vega-Lite visualization in the "map" div
-  vegaEmbed('#avg_score', spec2).then(function(result) {
+  vegaEmbed('#combined_line', spec2, { "actions": false, "padding": 20 }).then(function(result) {
   }).catch(console.error);
+
+
+  var spec2 = "goal_scatter.json";
+
+  // Embed the Vega-Lite visualization in the "map" div
+  vegaEmbed('#goal_scatter', spec2, { "actions": false, "padding": 20 }).then(function(result) {
+  }).catch(console.error);
+
+
+
 
 
 </script>
