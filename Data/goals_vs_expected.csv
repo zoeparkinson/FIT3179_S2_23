@@ -1,0 +1,233 @@
+team,score,xg,manager,captain,Year
+Spain,1,2.1,Jorge Vilda,Olga Carmona,2023
+England,0,0.5,Sarina Wiegman,Millie Bright,2023
+Sweden,2,1.8,Peter Gerhardsson,Kosovare Asllani,2023
+Australia,0,0.8,Tony Gustavsson,Sam Kerr,2023
+Australia,1,1.4,Tony Gustavsson,Sam Kerr,2023
+England,3,1.3,Sarina Wiegman,Millie Bright,2023
+Spain,2,1.6,Jorge Vilda,Olga Carmona,2023
+Sweden,1,0.9,Peter Gerhardsson,Kosovare Asllani,2023
+Australia,0,1.6,Tony Gustavsson,Steph Catley,2023
+France,0,2.0,Hervé Renard,Wendie Renard,2023
+England,2,1.5,Sarina Wiegman,Millie Bright,2023
+Colombia,1,0.5,Nelson Abadía,Catalina Usme,2023
+Spain,2,3.4,Jorge Vilda,Esther González,2023
+Netherlands,1,0.8,Andries Jonker,Sherida Spitse,2023
+Japan,1,1.7,Futoshi Ikeda,Saki Kumagai,2023
+Sweden,2,2.0,Peter Gerhardsson,Kosovare Asllani,2023
+Colombia,1,0.9,Nelson Abadía,Catalina Usme,2023
+Jamaica,0,1.2,Lorne Donaldson,Khadija Shaw,2023
+France,4,2.2,Hervé Renard,Wendie Renard,2023
+Morocco,0,0.0,Reynald Pedros,Ghizlane Chebbak,2023
+England,0,0.9,Sarina Wiegman,Millie Bright,2023
+Nigeria,0,1.2,Randy Waldrum,Chiamaka Nnadozie,2023
+Australia,2,1.1,Tony Gustavsson,Steph Catley,2023
+Denmark,0,0.7,Lars Søndergaard,Pernille Harder,2023
+Netherlands,2,1.6,Andries Jonker,Sherida Spitse,2023
+South Africa,0,1.2,Desiree Ellis,Thembi Kgatlana,2023
+Sweden,0,0.7,Peter Gerhardsson,Kosovare Asllani,2023
+United States of America,0,1.3,Vlatko Andonovski,Lindsey Horan,2023
+Switzerland,1,0.3,Inka Grings,Lia Wälti,2023
+Spain,5,3.5,Jorge Vilda,Esther González,2023
+Japan,3,1.0,Futoshi Ikeda,Saki Kumagai,2023
+Norway,1,0.8,Hege Riise,Maren Mjelde,2023
+Morocco,1,1.2,Reynald Pedros,Ghizlane Chebbak,2023
+Colombia,0,0.6,Nelson Abadía,Daniela Montoya,2023
+Korea Republic,1,1.0,Colin Bell,Kim Hye-ri,2023
+Germany,1,1.8,Martina Voss-Tecklenburg,Alexandra Popp,2023
+South Africa,3,1.4,Desiree Ellis,Thembi Kgatlana,2023
+Italy,2,3.2,Milena Bertolini,Barbara Bonansea,2023
+Argentina,0,0.4,Germán Portanova,Vanina Correa,2023
+Sweden,2,2.0,Peter Gerhardsson,Caroline Seger,2023
+Jamaica,0,0.2,Lorne Donaldson,Khadija Shaw,2023
+Brazil,0,1.6,Pia Sundhage,Marta,2023
+Panama,3,1.5,Nacho Quintana,Marta Cox,2023
+France,6,4.4,Hervé Renard,Grace Geyoro,2023
+Vietnam,0,0.4,Mai Đức Chung,Phạm Hải Yến,2023
+Netherlands,7,4.9,Andries Jonker,Sherida Spitse,2023
+Portugal,0,0.4,Francisco Neto,Dolores Silva,2023
+United States of America,0,2.1,Vlatko Andonovski,Lindsey Horan,2023
+Haiti,0,0.5,Nicolas Delépine,Nérilia Mondésir,2023
+Denmark,2,1.9,Lars Søndergaard,Pernille Harder,2023
+China PR,1,0.9,Shui Qingxia,Wang Shanshan,2023
+England,6,2.6,Sarina Wiegman,Millie Bright,2023
+Japan,4,0.9,Futoshi Ikeda,Saki Kumagai,2023
+Spain,0,0.7,Jorge Vilda,Olga Carmona,2023
+Costa Rica,1,2.1,Amelia Valverde,Katherine Alvarado,2023
+Zambia,3,2.4,Bruce Mwape,Barbra Banda,2023
+Republic of Ireland,0,0.5,Vera Pauw,Katie McCabe,2023
+Nigeria,0,1.1,Randy Waldrum,Chiamaka Nnadozie,2023
+Canada,0,0.6,Bev Priestman,Christine Sinclair,2023
+Australia,4,2.7,Tony Gustavsson,Steph Catley,2023
+Korea Republic,0,1.2,Colin Bell,Kim Hye-ri,2023
+Morocco,1,1.4,Reynald Pedros,Ghizlane Chebbak,2023
+Switzerland,0,0.1,Inka Grings,Lia Wälti,2023
+New Zealand,0,0.6,Jitka Klimková,Ali Riley,2023
+Norway,6,3.9,Hege Riise,Maren Mjelde,2023
+Philippines,0,0.1,Alen Stajcic,Hali Long,2023
+Germany,1,1.7,Martina Voss-Tecklenburg,Alexandra Popp,2023
+Colombia,2,0.4,Nelson Abadía,Daniela Montoya,2023
+Sweden,5,3.4,Peter Gerhardsson,Kosovare Asllani,2023
+Italy,0,0.6,Milena Bertolini,Barbara Bonansea,2023
+France,2,1.2,Hervé Renard,Wendie Renard,2023
+Brazil,1,1.6,Pia Sundhage,Rafaelle,2023
+Panama,0,0.5,Nacho Quintana,Marta Cox,2023
+Jamaica,1,1.0,Lorne Donaldson,Allyson Swaby,2023
+Argentina,2,0.7,Germán Portanova,Vanina Correa,2023
+South Africa,2,2.1,Desiree Ellis,Refiloe Jane,2023
+England,1,1.1,Sarina Wiegman,Millie Bright,2023
+Denmark,0,0.5,Lars Søndergaard,Pernille Harder,2023
+China PR,1,1.6,Shui Qingxia,Wang Shanshan,2023
+Haiti,0,0.8,Nicolas Delépine,Nérilia Mondésir,2023
+United States of America,1,0.9,Vlatko Andonovski,Lindsey Horan,2023
+Netherlands,1,0.3,Andries Jonker,Sherida Spitse,2023
+Portugal,2,4.8,Francisco Neto,Ana Borges,2023
+Vietnam,0,0.2,Mai Đức Chung,Huỳnh Như,2023
+Australia,2,2.2,Tony Gustavsson,Steph Catley,2023
+Nigeria,3,1.4,Randy Waldrum,Chiamaka Nnadozie,2023
+Japan,2,2.5,Futoshi Ikeda,Saki Kumagai,2023
+Costa Rica,0,0.2,Amelia Valverde,Katherine Alvarado,2023
+Spain,5,4.4,Jorge Vilda,Ivana Andrés,2023
+Zambia,0,0.4,Bruce Mwape,Barbra Banda,2023
+Canada,2,2.3,Bev Priestman,Jessie Fleming,2023
+Republic of Ireland,1,1.5,Vera Pauw,Katie McCabe,2023
+Colombia,2,1.6,Nelson Abadía,Daniela Montoya,2023
+Korea Republic,0,0.5,Colin Bell,Kim Hye-ri,2023
+New Zealand,0,1.9,Jitka Klimková,Ria Percival,2023
+Philippines,1,0.4,Alen Stajcic,Hali Long,2023
+Switzerland,0,1.0,Inka Grings,Lia Wälti,2023
+Norway,0,1.5,Hege Riise,Maren Mjelde,2023
+Italy,1,0.4,Milena Bertolini,Barbara Bonansea,2023
+Argentina,0,0.3,Germán Portanova,Vanina Correa,2023
+Germany,6,2.4,Martina Voss-Tecklenburg,Alexandra Popp,2023
+Morocco,0,0.2,Reynald Pedros,Ghizlane Chebbak,2023
+Brazil,4,4.3,Pia Sundhage,Rafaelle,2023
+Panama,0,0.2,Nacho Quintana,Natalia Mills,2023
+Sweden,2,2.3,Peter Gerhardsson,Kosovare Asllani,2023
+South Africa,1,1.2,Desiree Ellis,Refiloe Jane,2023
+Netherlands,1,1.7,Andries Jonker,Sherida Spitse,2023
+Portugal,0,0.1,Francisco Neto,Dolores Silva,2023
+France,0,2.0,Hervé Renard,Wendie Renard,2023
+Jamaica,0,0.2,Lorne Donaldson,Khadija Shaw,2023
+United States of America,3,4.7,Vlatko Andonovski,Lindsey Horan,2023
+Vietnam,0,0.0,Mai Đức Chung,Huỳnh Như,2023
+Zambia,0,0.0,Bruce Mwape,Barbra Banda,2023
+Japan,5,6.5,Futoshi Ikeda,Saki Kumagai,2023
+England,1,2.6,Sarina Wiegman,Millie Bright,2023
+Haiti,0,0.7,Nicolas Delépine,Nérilia Mondésir,2023
+Denmark,1,1.1,Lars Søndergaard,Pernille Harder,2023
+China PR,0,0.4,Shui Qingxia,Wang Shanshan,2023
+Nigeria,0,0.5,Randy Waldrum,Chiamaka Nnadozie,2023
+Canada,0,1.4,Bev Priestman,Christine Sinclair,2023
+Philippines,0,0.1,Alen Stajcic,Hali Long,2023
+Switzerland,2,3.1,Inka Grings,Lia Wälti,2023
+Spain,3,4.7,Jorge Vilda,Ivana Andrés,2023
+Costa Rica,0,0.1,Amelia Valverde,Katherine Alvarado,2023
+New Zealand,1,1.7,Jitka Klimková,Ali Riley,2023
+Norway,0,1.2,Hege Riise,Maren Mjelde,2023
+Australia,1,1.6,Tony Gustavsson,Steph Catley,2023
+Republic of Ireland,0,0.6,Vera Pauw,Katie McCabe,2023
+United States of America,2,3.0,Jill Ellis,Megan Rapinoe,2019
+Netherlands,0,0.2,Sarina Wiegman,Sari van Veenendaal,2019
+England,1,0.9,Phil Neville,Steph Houghton,2019
+Sweden,2,0.9,Peter Gerhardsson,Caroline Seger,2019
+Netherlands,1,1.3,Sarina Wiegman,Sari van Veenendaal,2019
+Sweden,0,0.6,Peter Gerhardsson,Caroline Seger,2019
+England,1,1.7,Phil Neville,Steph Houghton,2019
+United States of America,2,0.9,Jill Ellis,Alex Morgan,2019
+Italy,0,1.2,Milena Bertolini,Sara Gama,2019
+Netherlands,2,1.6,Sarina Wiegman,Sari van Veenendaal,2019
+Germany,1,1.8,Martina Voss-Tecklenburg,Alexandra Popp,2019
+Sweden,2,2.3,Peter Gerhardsson,Caroline Seger,2019
+France,1,1.6,Corinne Diacre,Amandine Henry,2019
+United States of America,2,1.1,Jill Ellis,Alex Morgan,2019
+Norway,0,0.8,Martin Sjögren,Maren Mjelde,2019
+England,3,3.4,Phil Neville,Steph Houghton,2019
+Italy,2,1.4,Milena Bertolini,Sara Gama,2019
+China PR,0,0.8,Jia Xiuquan,Wu Haiyan,2019
+Netherlands,2,1.8,Sarina Wiegman,Sari van Veenendaal,2019
+Japan,1,1.2,Asako Takemoto,Saki Kumagai,2019
+Spain,1,0.2,Jorge Vilda,Irene Paredes,2019
+United States of America,2,2.4,Jill Ellis,Megan Rapinoe,2019
+Sweden,1,1.3,Peter Gerhardsson,Caroline Seger,2019
+Canada,0,1.2,Kenneth Heiner-Møller,Christine Sinclair,2019
+England,3,2.1,Phil Neville,Steph Houghton,2019
+Cameroon,0,0.5,Alain Djeumfa,Gabrielle Onguene,2019
+France,2,3.1,Corinne Diacre,Amandine Henry,2019
+Brazil,1,1.3,Vadão,Marta,2019
+Germany,3,1.8,Martina Voss-Tecklenburg,Alexandra Popp,2019
+Nigeria,0,0.4,Thomas Dennerby,Desire Oparanozie,2019
+Norway,1,2.2,Martin Sjögren,Maren Mjelde,2019
+Australia,1,1.5,Ante Milicic,Sam Kerr,2019
+Netherlands,2,1.8,Sarina Wiegman,Sari van Veenendaal,2019
+Canada,1,1.3,Kenneth Heiner-Møller,Christine Sinclair,2019
+Cameroon,2,3.1,Alain Djeumfa,Gabrielle Onguene,2019
+New Zealand,1,0.5,Tom Sermanni,Ali Riley,2019
+Sweden,0,0.4,Peter Gerhardsson,Caroline Seger,2019
+United States of America,2,2.1,Jill Ellis,Alex Morgan,2019
+Thailand,0,0.3,Noengruthai Sratongwian,Kanjana Sungngoen,2019
+Chile,2,2.7,Juan Letelier,Christiane Endler,2019
+Japan,0,1.4,Asako Takemoto,Saki Kumagai,2019
+England,2,1.7,Phil Neville,Steph Houghton,2019
+Scotland,3,2.2,Shelley Kerr,Rachel Corsie,2019
+Argentina,3,1.6,Carlos Borrello,Estefanía Banini,2019
+Italy,0,1.1,Milena Bertolini,Sara Gama,2019
+Brazil,1,1.5,Vadão,Marta,2019
+Jamaica,1,0.9,Hue Menzies,Konya Plummer,2019
+Australia,4,2.2,Ante Milicic,Sam Kerr,2019
+South Africa,0,0.5,Desiree Ellis,Janine van Wyk,2019
+Germany,4,5.1,Martina Voss-Tecklenburg,Alexandra Popp,2019
+China PR,0,0.1,Jia Xiuquan,Wu Haiyan,2019
+Spain,0,1.7,Jorge Vilda,Irene Paredes,2019
+Korea Republic,1,2.3,Yoon Deok-yeo,Cho So-hyun,2019
+Norway,2,2.2,Martin Sjögren,Maren Mjelde,2019
+Nigeria,0,0.0,Thomas Dennerby,Desire Oparanozie,2019
+France,1,2.7,Corinne Diacre,Amandine Henry,2019
+Sweden,5,5.2,Peter Gerhardsson,Caroline Seger,2019
+Thailand,1,0.6,Noengruthai Sratongwian,Kanjana Sungngoen,2019
+United States of America,3,3.7,Jill Ellis,Carli Lloyd,2019
+Chile,0,0.0,Juan Letelier,Christiane Endler,2019
+Netherlands,3,1.6,Sarina Wiegman,Sari van Veenendaal,2019
+Cameroon,1,1.2,Alain Djeumfa,Christine Manie,2019
+Canada,2,3.7,Kenneth Heiner-Møller,Christine Sinclair,2019
+New Zealand,0,0.1,Tom Sermanni,Ali Riley,2019
+Japan,2,2.6,Asako Takemoto,Saki Kumagai,2019
+Scotland,1,0.9,Shelley Kerr,Rachel Corsie,2019
+Jamaica,0,0.3,Hue Menzies,Konya Plummer,2019
+Italy,5,3.4,Milena Bertolini,Sara Gama,2019
+England,1,3.4,Phil Neville,Steph Houghton,2019
+Argentina,0,0.1,Carlos Borrello,Estefanía Banini,2019
+Australia,3,1.3,Ante Milicic,Sam Kerr,2019
+Brazil,2,1.5,Vadão,Marta,2019
+South Africa,0,0.2,Desiree Ellis,Janine van Wyk,2019
+China PR,1,1.2,Jia Xiuquan,Wu Haiyan,2019
+Nigeria,2,1.1,Thomas Dennerby,Desire Oparanozie,2019
+Korea Republic,0,0.8,Yoon Deok-yeo,Cho So-hyun,2019
+Germany,1,1.7,Martina Voss-Tecklenburg,Alexandra Popp,2019
+Spain,0,0.9,Jorge Vilda,Marta Torrejón,2019
+France,2,2.1,Corinne Diacre,Amandine Henry,2019
+Norway,1,0.2,Martin Sjögren,Maren Mjelde,2019
+New Zealand,0,0.7,Tom Sermanni,Ali Riley,2019
+Netherlands,1,2.4,Sarina Wiegman,Sari van Veenendaal,2019
+Chile,0,0.2,Juan Letelier,Christiane Endler,2019
+Sweden,2,2.5,Peter Gerhardsson,Caroline Seger,2019
+United States of America,13,7.1,Jill Ellis,Megan Rapinoe,2019
+Thailand,0,0.1,Noengruthai Sratongwian,Kanjana Sungngoen,2019
+Argentina,0,0.2,Carlos Borrello,Estefanía Banini,2019
+Japan,0,0.4,Asako Takemoto,Saki Kumagai,2019
+Canada,1,1.3,Kenneth Heiner-Møller,Christine Sinclair,2019
+Cameroon,0,0.4,Alain Djeumfa,Christine Manie,2019
+Australia,1,2.0,Ante Milicic,Sam Kerr,2019
+Italy,2,0.8,Milena Bertolini,Sara Gama,2019
+Brazil,3,3.7,Vadão,Mônica,2019
+Jamaica,0,1.1,Hue Menzies,Konya Plummer,2019
+England,2,2.0,Phil Neville,Steph Houghton,2019
+Scotland,1,0.9,Shelley Kerr,Rachel Corsie,2019
+Germany,1,0.8,Martina Voss-Tecklenburg,Alexandra Popp,2019
+China PR,0,0.8,Jia Xiuquan,Wu Haiyan,2019
+Spain,3,3.4,Jorge Vilda,Marta Torrejón,2019
+South Africa,1,0.5,Desiree Ellis,Janine van Wyk,2019
+Norway,3,0.6,Martin Sjögren,Maren Mjelde,2019
+Nigeria,0,0.8,Thomas Dennerby,Desire Oparanozie,2019
+France,4,1.6,Corinne Diacre,Amandine Henry,2019
+Korea Republic,0,0.4,Yoon Deok-yeo,Cho So-hyun,2019
