@@ -1,6 +1,6 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"title": "Number of goals scored by the top scorer in each World Cup",
+	"title": "Number of goals scored by the top scorer",
 	"height":400,
 	"width": "container",
 	
@@ -14,7 +14,7 @@
 			{ "Year": "2003", "NumGoals": 7, "TopScorer": "Birgit Prinz (DE)" },
 			{ "Year": "1999", "NumGoals": 7, "TopScorer": "Sun Wen (CN) and Sissi (BR)" },
 			{ "Year": "1995", "NumGoals": 6, "TopScorer": "Ann Kristin Aarønes (NO)" },
-      { "Year": "1991", "NumGoals": 10, "TopScorer": "Aichelle Akers (US)" }
+      { "Year": "1991", "NumGoals": 10, "TopScorer": "Michelle Akers (US)" }
 		]
 	},
 	"mark": "bar",
@@ -41,7 +41,7 @@
 	"config": {
 		"background": null,
 		"view": { "stroke": "transparent" },
-		"title": {"color": "white", "fontSize": 20},
+		"title": {"color": "white", "fontSize": 25},
 		"axis": {
 		  "titleColor": "white" ,
 		  "titleFontSize": 15,

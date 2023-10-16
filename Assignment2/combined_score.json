@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of goals scored in each world cup",
-  "width": 400,
+  "title": "Goals and penalties scored",
+  "width": "container",
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/totals_and_average_by_year.csv"
@@ -34,10 +34,35 @@
           },
           "tooltip": [
             {"field": "Year", "title": "Year"},
-            {"field": "full_total", "title": "Regular goal"},
+            {"field": "full_total", "title": "Total goals scored"},
             {"field": "total_score", "title": "Regular goals scored"},
             {"field": "total_penalty", "title": "Penalty goals scored"}
           ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "dx": 150,
+          "dy": -170,
+          "fontSize": 11,
+          "fontWeight": "lighter",
+          "color": "white"
+    
+          
+        },
+        "encoding": {
+          "text": {"value":"2023 had the highest total goals"},
+      
+          "opacity": {
+          "condition": {
+            "test": "datum.Year == 2023",
+            "value": 1
+          },
+          "value": 0
+          }
         }
       }
     ]
@@ -45,7 +70,7 @@
   "config": {
     "background": null,
     "view": { "stroke": "transparent" },
-    "title": {"color": "white", "fontSize": 30},
+    "title": {"color": "white", "fontSize": 25},
     "axis": {
       "titleColor": "white" ,
       "titleFontSize": 15,

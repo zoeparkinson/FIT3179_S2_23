@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of games played in FIFA Women's World Cup 1991-2023",
-  "width": 800,
-  "height": 600,
+  "width": 550,
+  "height": 400,
+  
+  "title": "Number of matches each country has played ",
   "background": null,
   
   
@@ -31,6 +32,7 @@
         "color": {
           "field": "Count",
           "type": "quantitative",
+          "legend": {"direction": "horizontal", "orient": "bottom"},
           "scale": {
             "type": "linear",
             "domain": [0, 53], 
@@ -60,7 +62,7 @@
   ],
   "config": {
     "view": { "stroke": "transparent" },
-    "title": {"color": "white", "fontSize": 30},
+    "title": {"color": "white", "fontSize": 25, "align":"center"},
     "axis": {
       "titleColor": "white" ,
       "titleFontSize": 15,
@@ -71,9 +73,9 @@
     },
     "legend": { "titleColor": "white" ,
     "titleFontSize": 15,
+    "titlePadding": 10,
     "labelColor": "white",
-    "labelFontSize": 13,
-  "padding":50}
+    "labelFontSize": 13}
   }
 }
 

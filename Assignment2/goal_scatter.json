@@ -1,8 +1,8 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"title": "Goals scored across all World Cups",
+	"title": "Each goal scored 1991-2023",
     "height": 400,
-	"width": 600,
+	"width": "container",
     "background": null,
 	"data": {
 		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/all_goals.csv"
@@ -68,7 +68,7 @@
 		]
 	},
     "config": {
-        "title": {"color": "white", "fontSize": 30},
+        "title": {"color": "white", "fontSize": 25},
         "axis": {
           "titleColor": "white" ,
           "titleFontSize": 15,

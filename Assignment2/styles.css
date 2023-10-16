@@ -26,24 +26,39 @@ body {
 		font-family: Arial;
 		line-height: normal;
 	}
+	h3 {
+		font-size:18px;
+		margin-bottom: -20px;
+		color: white;
+		text-align:center;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: normal;
+		opacity: 0.8;
+		font-weight:lighter;
+	}
 
 	h2 {
 		
 		line-height: 40px;
-		color: white;
+		font-size: 59px;
+		color: #0a8f01;
 		text-align:center;
 		font-family: Arial;
-		line-height: normal;
+		line-height: 0%;
+		margin-top: 35px;
+		letter-spacing: 1px;
+		
 	}
 
 	p{
 		
-		line-height: 40px;
+		line-height: 60px;
 		color: white;
 		justify-content: right;
 
 		font-family: Arial;
-		line-height: normal;
+
+		font-size: 20px;
 	}
 	img {
 		display: block;
@@ -66,6 +81,14 @@ body {
 		margin-bottom: 40px;
 	}
 	
+	p{
+		padding-left: 50px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: white;
+		line-height: 25px;
+		
+	}
+	
 
 #main {
 
@@ -82,13 +105,16 @@ body {
 	bottom: 100px; 
 	left: 100px;
 	right: 400px; */
-	justify-content: center;
+	
+	justify-content: space-around;
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 20px;
+	justify-content: center;
+
 	
-	/*height: 1000px;
-	width: 800px;*/
+	padding-left: 20px;
+	
+	
 }
 
 #heatmap {
@@ -98,12 +124,12 @@ body {
 	right: 200px; */
 	/* justify-content: center; */
 	display: flex;
-	justify-content: left;
+	justify-content: center;
+	margin: -10px;
 
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 20px;
-	margin: 10px;
-	width: 100%;
+
+
 	/* background-color: rgba(255, 255, 255); */
 	
 	
@@ -112,30 +138,28 @@ body {
 }
 
 #sankey {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
-	justify-content: center;
 	display: flex;
+	
+	justify-content: space-around;
+	align-items: center;
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 20px;
 	
 	
-	/*height: 1000px;
-	width: 800px;*/
-}
+	
+  }
+  
+
 #bar {
 	/* top:10px;
 	bottom: 100px; 
 	left: 100px;
 	right: 400px; */
-	justify-content: right;
+	padding: 20px;
+	justify-content: space-around;
+	justify-content: center;
+	margin: 20px;
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 20px;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
 #line {
@@ -158,12 +182,11 @@ body {
 	left: 100px;
 	right: 400px; */
 	padding: 20px;
-	justify-content: right;
-
+	justify-content: space-around;
+	justify-content: center;
+	margin: 20px;
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
 #penalty_line {
@@ -172,12 +195,11 @@ body {
 	left: 100px;
 	right: 400px; */
 	padding: 20px;
-	justify-content: left;
-
+	justify-content: space-around;
+	justify-content: center;
+	margin: 20px;
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
 #avg_score {
@@ -187,14 +209,14 @@ body {
 	right: 400px; */
 	padding: 20px;
 	justify-content: space-around;
-	justify-content: right;
-	
+	justify-content: center;
+	margin: 20px;
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
 	
 }
 
-#combined_line {
+#combined_score {
 	/* top:10px;
 	bottom: 100px; 
 	left: 100px;
@@ -214,11 +236,36 @@ body {
 	bottom: 100px; 
 	left: 100px;
 	right: 400px; */
-	padding: 20px;
+	
 	justify-content: space-around;
 	justify-content: center;
-	margin: 20px;
+
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
 	
 }
+
+
+#goals_expected{
+	
+
+	justify-content: right;
+	padding-left: -800px;
+	align-items: right; 
+	align-self: right;
+	
+	
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+span.vega-bind-name {
+    color: white;
+	padding-left: 100px;
+
+}
+
+

@@ -1,9 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.2.json",
     "height": 400,
-    "width": 800,
-    
-    "title": "Past winners",
+    "width": 600,
+    "title":"All World Cup winners",
     "background": null,
     "data": [
       {
@@ -71,7 +70,7 @@
           {
             "type": "formula",
             "expr": "datum.stack == 'Team'",
-            "as": "leftLabel"
+            "as": "rightLabel"
           },
           {
             "type": "formula",
@@ -198,10 +197,10 @@
         },
           "update": {
             "x": {
-              "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') +6 : -6)"
+              "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') +6 : -40)"
             },
             "yc": {"signal": "(datum.scaledY0 + datum.scaledY1)/2"},
-            "align": {"signal": "datum.rightLabel ? 'left' : 'right'"},
+            "align": {"signal": "datum.left ? 'right' : 'left'"},
             "fontWeight": {"value": "bold"},
             "text": {
               
@@ -219,7 +218,7 @@
         "on": [
           {
             "events": "@groupMark:mouseover",
-            "update": "{Team:datum.stack=='Team' && datum.grpId, Year:datum.stack=='Year' && datum.grpId}"
+            "update": "{Year:datum.stack=='Year' && datum.grpId, Team:datum.stack=='Team' && datum.grpId}"
           },
           {"events": "mouseout", "update": "{}"}
         ]
@@ -243,7 +242,7 @@
       "view": { "stroke": "transparent" },
       "axisX": { "domain": false },
       "axisY": { "domain": false },
-      "title": {"color": "white", "fontSize": 29},
+      "title": {"color": "white", "fontSize": 25},
       "axis": {
         "titleColor": "white" ,
         "titleFontSize": 15,

@@ -1,8 +1,8 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"title": "All games played in a FIFA Women's World Cup 1991-2023",
+	"title": "Each match played from 1991 - 2023",
 	"width": "container",
-	"height": 300,
+	"height": 800,
 	"background": null,
 	"data": {
 	  "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/matches_id.csv"
@@ -18,16 +18,16 @@
 	  {
 		"mark": { "type": "rect" },
 		"encoding": {
-		  "y": {
+		  "x": {
 			"field": "Year",
 			"timeUnit": "year",
 			"type": "ordinal",
-			"axis": { "title": "Year", "orient": "left", "grid": false }
+			"axis": { "title": "Year", "grid": false, "orient": "top" }
 			
 		  },
-		  "x": {
+		  "y": {
 			"field": "id",
-			"sort": "ascending",
+			"sort": "descending",
 			"type": "quantitative",
 			"axis": {
 			  "title": "Match number",
@@ -39,7 +39,12 @@
 		  "color": {
 			"field": "Attendance",
 			"type": "quantitative",
-			"scale": { "scheme": "greens" }
+			"scale": {
+				"type": "linear",
+				"domain": [0, 91000], 
+				"range": ["#ceedcc", "#0a8f01"] 
+			  },
+			"legend":{"orient": "bottom"}
 		  },
 		  "stroke": {"value": "black"},
 		  "tooltip": [
@@ -57,7 +62,7 @@
 	  "view": { "stroke": "transparent" },
 	  "axisX": { "domain": false },
 	  "axisY": { "domain": false },
-	  "title": {"color": "white", "fontSize": 29},
+	  "title": {"color": "white", "fontSize": 25},
     "axis": {
       "titleColor": "white" ,
       "titleFontSize": 15,
