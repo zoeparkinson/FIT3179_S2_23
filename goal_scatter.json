@@ -1,17 +1,26 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": "Each goal scored 1991-2023",
-    "height": 400,
+	"height": 400,
 	"width": "container",
-    "background": null,
+	"background": null,
 	"data": {
 		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/all_goals.csv"
 	},
-	"mark": { "type": "point", "filled": true, "size": 60 },
+	"mark": {
+		"type": "point",
+		"filled": true,
+		"size": 60
+	},
 	"params": [
 		{
 			"name": "year",
-			"select": { "type": "point", "fields": ["year"] },
+			"select": {
+				"type": "point",
+				"fields": [
+					"year"
+				]
+			},
 			"bind": "legend"
 		}
 	],
@@ -29,7 +38,9 @@
 		"color": {
 			"field": "year",
 			"type": "nominal",
-            "legend": {"title": "Year"},
+			"legend": {
+				"title": "Year"
+			},
 			"scale": {
 				"domain": [
 					"2023",
@@ -56,29 +67,52 @@
 			}
 		},
 		"opacity": {
-			"condition": { "param": "year", "value": 1 },
+			"condition": {
+				"param": "year",
+				"value": 1
+			},
 			"value": 0.1
 		},
 		"tooltip": [
-			{ "field": "year", "title": "Year:" },
-			{ "field": "team", "title": "Team:" },
-			{ "field": "player", "title": "Player:" },
-			{ "field": "time", "title": "Time (minues):" },
-			{ "field": "id", "title": "Match number" }
+			{
+				"field": "year",
+				"title": "Year:"
+			},
+			{
+				"field": "team",
+				"title": "Team:"
+			},
+			{
+				"field": "player",
+				"title": "Player:"
+			},
+			{
+				"field": "time",
+				"title": "Time (minues):"
+			},
+			{
+				"field": "id",
+				"title": "Match number"
+			}
 		]
 	},
-    "config": {
-        "title": {"color": "white", "fontSize": 25},
-        "axis": {
-          "titleColor": "white" ,
-          "titleFontSize": 15,
-          "labelColor": "white",
-          "labelFontSize": 13,
-          "gridColor": "#454242"
-        },
-        "legend": { "titleColor": "white" ,
-        "titleFontSize": 15,
-        "labelColor": "white",
-        "labelFontSize": 13}
-      }
+	"config": {
+		"title": {
+			"color": "white",
+			"fontSize": 25
+		},
+		"axis": {
+			"titleColor": "white",
+			"titleFontSize": 15,
+			"labelColor": "white",
+			"labelFontSize": 13,
+			"gridColor": "#454242"
+		},
+		"legend": {
+			"titleColor": "white",
+			"titleFontSize": 15,
+			"labelColor": "white",
+			"labelFontSize": 13
+		}
+	}
 }

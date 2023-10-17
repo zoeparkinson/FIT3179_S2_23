@@ -3,156 +3,307 @@
   "title": "Expected vs actual average goals scored",
   "width": 400,
   "height": 700,
-
   "data": {
     "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/goals_vs_expected.csv"
   },
   "params": [
-  {
-  "name": "Team_selection",
-  "bind": {
-    "input": "select",
-    "options": [
-    null,
-          "Republic of Ireland", "Philippines", "Haiti", "Spain", "South Africa", "New Zealand", "Argentina", "Vietnam", "Germany", "Australia", "Thailand", "Portugal", "Colombia", "United States of America", "Italy", "China PR", "Korea Republic", "Switzerland", "Denmark", "Costa Rica", "Netherlands", "England", "Morocco", "Norway", "Cameroon", "Brazil", "Panama", "Zambia", "France", "Jamaica", "Japan", "Sweden", "Scotland", "Nigeria", "Canada", "Chile"
-
-    ],
-    "labels": [
-    "Show All",
-          "Republic of Ireland", "Philippines", "Haiti", "Spain", "South Africa", "New Zealand", "Argentina", "Vietnam", "Germany", "Australia", "Thailand", "Portugal", "Colombia", "United States of America", "Italy", "China PR", "Korea Republic", "Switzerland", "Denmark", "Costa Rica", "Netherlands", "England", "Morocco", "Norway", "Cameroon", "Brazil", "Panama", "Zambia", "France", "Jamaica", "Japan", "Sweden", "Scotland", "Nigeria", "Canada", "Chile"
-
-    ],
-    "name": "Team Selection: "
-  }
-  }
-],
+    {
+      "name": "Team_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Republic of Ireland",
+          "Philippines",
+          "Haiti",
+          "Spain",
+          "South Africa",
+          "New Zealand",
+          "Argentina",
+          "Vietnam",
+          "Germany",
+          "Australia",
+          "Thailand",
+          "Portugal",
+          "Colombia",
+          "United States of America",
+          "Italy",
+          "China PR",
+          "Korea Republic",
+          "Switzerland",
+          "Denmark",
+          "Costa Rica",
+          "Netherlands",
+          "England",
+          "Morocco",
+          "Norway",
+          "Cameroon",
+          "Brazil",
+          "Panama",
+          "Zambia",
+          "France",
+          "Jamaica",
+          "Japan",
+          "Sweden",
+          "Scotland",
+          "Nigeria",
+          "Canada",
+          "Chile"
+        ],
+        "labels": [
+          "Show All",
+          "Republic of Ireland",
+          "Philippines",
+          "Haiti",
+          "Spain",
+          "South Africa",
+          "New Zealand",
+          "Argentina",
+          "Vietnam",
+          "Germany",
+          "Australia",
+          "Thailand",
+          "Portugal",
+          "Colombia",
+          "United States of America",
+          "Italy",
+          "China PR",
+          "Korea Republic",
+          "Switzerland",
+          "Denmark",
+          "Costa Rica",
+          "Netherlands",
+          "England",
+          "Morocco",
+          "Norway",
+          "Cameroon",
+          "Brazil",
+          "Panama",
+          "Zambia",
+          "France",
+          "Jamaica",
+          "Japan",
+          "Sweden",
+          "Scotland",
+          "Nigeria",
+          "Canada",
+          "Chile"
+        ],
+        "name": "Team Selection: "
+      }
+    }
+  ],
   "transform": [
     {
       "aggregate": [
-        {"op": "mean", "field": "xg", "as": "Average expected score"},
-        {"op": "mean", "field": "score", "as": "Average score"}
+        {
+          "op": "mean",
+          "field": "xg",
+          "as": "Average expected score"
+        },
+        {
+          "op": "mean",
+          "field": "score",
+          "as": "Average score"
+        }
       ],
-      "groupby": ["team"]
-    },
-    {"calculate": "datum['Average score'] - datum['Average expected score']", "as": "difference"},
-    {"filter": "Team_selection == null || datum.team == Team_selection"}
-  ],
-  "repeat": { "layer": ["Average score", "Average expected score"] },
-"spec": {
-  "encoding": {
-        "y": {
-          "field": "team",
-          "type": "nominal",
-          "title": {"value":"Team", "angle":59}
-          
-        },
-        "x": {
-          "field": "Average score",
-          "type": "quantitative",
-          "axis": {"title": "Average score vs average expected score"}
-        },
-        "x2": {
-          "field": "Average expected score",
-          "type": "quantitative"
-        }}
-        ,
-  "layer": [
-    {
-      "mark": {
-        "type": "line",
-        "size": 1
-      },
-      "encoding": {
-        "color":{"value": "white"}
-      }
+      "groupby": [
+        "team"
+      ]
     },
     {
-      "mark": {
-        "type": "point",
-        "filled": true
-      },
-      "encoding": {
-        "x": {
-          "field": {"repeat": "layer"},
-          "type": "quantitative"
-          
-          
-        },
-        "color": {
-          
-          "datum": {"repeat": "layer"},
-          "type": "nominal",
-          "legend": {"title": "Goal type", "orient":"top", "titleOrient":"left"},
-          "scale": {
-            "domain": ["Average score", "Average expected score"],
-            "range": ["#0a8f01", "red"]
-          }
-        },
-        
-        "tooltip": [
-          {"field": "team", "title": "Team:"},
-          {"field": "Average score", "title": "Average goals scored", "format": ".2f"},
-          {"field": "Average expected score", "title": "Average expected goals", "format": ".2f"},
-          {"field": "difference", "title": "Difference", "format": ".2f"}
-        ],
-        "opacity": {"value": 1},
-        "size":{"value":100}
-      }
-      
+      "calculate": "datum['Average score'] - datum['Average expected score']",
+      "as": "difference"
     },
     {
-      "mark": {
-        "type": "point",
-        "filled": true
-      },
-      "encoding": {
-        "x": {
-          "field": "Average score",
-          "type": "quantitative"
-          
-        },
-        "color": {
-          
-          "value":"green"
-        },
-        "tooltip": [
-          {"field": "team", "title": "Team:"},
-          {"field": "Average score", "title": "Average number goals scored", "format": ".2f"},
-          {"field": "Average expected score", "title": "Average expected number goals scored", "format": ".2f"},
-          {"field": "difference", "title": "Difference", "format": ".2f"}
-        ],
-        "opacity": {"value": 1},
-        "size":{"value":100}
-      }
-      
+      "filter": "Team_selection == null || datum.team == Team_selection"
     }
-
-    
-  ]
-},
-  "config": {
-    
-      "background": null,
-      "axisX": { "domain": true},
-      "axisY": { "domain": true,  "titlePadding": -45, "titleY":{"value":-10}, "titleAngle":360, "titleX":{"value":-30} },
-      "view": { "stroke": "transparent" },
-      "title": {"color": "white", "fontSize": 25, "dx":-25, "dy":-10},
-      "axis": {
-        "titleColor": "white" ,
-        "titleFontSize": 15,
-        "labelColor": "white",
-        "labelFontSize": 10,
-        "gridColor": "#454242"
-   
+  ],
+  "repeat": {
+    "layer": [
+      "Average score",
+      "Average expected score"
+    ]
+  },
+  "spec": {
+    "encoding": {
+      "y": {
+        "field": "team",
+        "type": "nominal",
+        "title": {
+          "value": "Team",
+          "angle": 59
+        }
       },
-      "legend": { "titleColor": "white" ,
+      "x": {
+        "field": "Average score",
+        "type": "quantitative",
+        "axis": {
+          "title": "Average score vs average expected score"
+        }
+      },
+      "x2": {
+        "field": "Average expected score",
+        "type": "quantitative"
+      }
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "size": 1
+        },
+        "encoding": {
+          "color": {
+            "value": "white"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true
+        },
+        "encoding": {
+          "x": {
+            "field": {
+              "repeat": "layer"
+            },
+            "type": "quantitative"
+          },
+          "color": {
+            "datum": {
+              "repeat": "layer"
+            },
+            "type": "nominal",
+            "legend": {
+              "title": "Goal type",
+              "orient": "top",
+              "titleOrient": "left"
+            },
+            "scale": {
+              "domain": [
+                "Average score",
+                "Average expected score"
+              ],
+              "range": [
+                "#0a8f01",
+                "red"
+              ]
+            }
+          },
+          "tooltip": [
+            {
+              "field": "team",
+              "title": "Team:"
+            },
+            {
+              "field": "Average score",
+              "title": "Average goals scored",
+              "format": ".2f"
+            },
+            {
+              "field": "Average expected score",
+              "title": "Average expected goals",
+              "format": ".2f"
+            },
+            {
+              "field": "difference",
+              "title": "Difference",
+              "format": ".2f"
+            }
+          ],
+          "opacity": {
+            "value": 1
+          },
+          "size": {
+            "value": 100
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true
+        },
+        "encoding": {
+          "x": {
+            "field": "Average score",
+            "type": "quantitative"
+          },
+          "color": {
+            "value": "green"
+          },
+          "tooltip": [
+            {
+              "field": "team",
+              "title": "Team:"
+            },
+            {
+              "field": "Average score",
+              "title": "Average number goals scored",
+              "format": ".2f"
+            },
+            {
+              "field": "Average expected score",
+              "title": "Average expected number goals scored",
+              "format": ".2f"
+            },
+            {
+              "field": "difference",
+              "title": "Difference",
+              "format": ".2f"
+            }
+          ],
+          "opacity": {
+            "value": 1
+          },
+          "size": {
+            "value": 100
+          }
+        }
+      }
+    ]
+  },
+  "config": {
+    "background": null,
+    "axisX": {
+      "domain": true
+    },
+    "axisY": {
+      "domain": true,
+      "titlePadding": -45,
+      "titleY": {
+        "value": -10
+      },
+      "titleAngle": 360,
+      "titleX": {
+        "value": -30
+      }
+    },
+    "view": {
+      "stroke": "transparent"
+    },
+    "title": {
+      "color": "white",
+      "fontSize": 25,
+      "dx": -25,
+      "dy": -10
+    },
+    "axis": {
+      "titleColor": "white",
+      "titleFontSize": 15,
+      "labelColor": "white",
+      "labelFontSize": 10,
+      "gridColor": "#454242"
+    },
+    "legend": {
+      "titleColor": "white",
       "titleFontSize": 13,
       "labelColor": "white",
       "labelFontSize": 13,
-      "symbolLimit":70,
-      "padding":10
-      
+      "symbolLimit": 70,
+      "padding": 10
+    }
   }
-  
-}
 }

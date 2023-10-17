@@ -1,261 +1,481 @@
 {
-    "$schema": "https://vega.github.io/schema/vega/v5.2.json",
-    "height": 400,
-    "width": 600,
-    "title":"All World Cup winners",
-    "background": null,
-    "data": [
-      {
-        "name": "rawData",
-        "values": [
-          {"key": {"Team": "Spain","Year": "2023"},"size": 1},
-          {"key": {"Team": "United States of America","Year": "2019"},"size": 1},
-          {"key": {"Team": "United States of America","Year": "2015"},"size": 1},
-          {"key": {"Team": "Japan","Year": "2011"},"size": 1},
-          {"key": {"Team": "Germany","Year": "2007"},"size": 1},
-          {"key": {"Team": "Germany","Year": "2003"},"size": 1},
-          {"key": {"Team": "United States of America","Year": "1999"},"size": 1 },
-          {"key": {"Team": "Norway","Year": "1995"},"size": 1},
-          {"key": {"Team": "United States of America","Year": "1991"},"size": 1}
-        ],
-        "transform": [
-          {"type": "formula", "expr": "datum.key.Team", "as": "Team"},
-          {"type": "formula", "expr": "datum.key.Year", "as": "Year"}
-        ]
-      },
-      
-      {
-        "name": "nodes",
-        "source": "rawData",
-        "transform": [
-          {
-            "type": "filter",
-            "expr": "!groupSelector || groupSelector.Team == datum.Team || groupSelector.Year == datum.Year"
+  "$schema": "https://vega.github.io/schema/vega/v5.2.json",
+  "height": 400,
+  "width": 600,
+  "title": "All World Cup winners",
+  "background": null,
+  "data": [
+    {
+      "name": "rawData",
+      "values": [
+        {
+          "key": {
+            "Team": "Spain",
+            "Year": "2023"
           },
-          {"type": "formula", "expr": "datum.Team+datum.Year", "as": "key"},
-          {"type": "fold", "fields": ["Team", "Year"], "as": ["stack", "grpId"]},
-          {
-            "type": "formula",
-            "expr": "datum.stack == 'Team' ? datum.Team+' '+datum.Year : datum.Year+' '+datum.Team",
-            "as": "sortField"
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "United States of America",
+            "Year": "2019"
           },
-          {
-            "type": "stack",
-            "groupby": ["stack"],
-            "sort": {"field": "sortField", "order": "descending"},
-            "field": "size"
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "United States of America",
+            "Year": "2015"
           },
-          {"type": "formula", "expr": "(datum.y0+datum.y1)/2", "as": "yc"}
-        ]
-      },
-      {
-        "name": "groups",
-        "source": "nodes",
-        "transform": [
-          {
-            "type": "aggregate",
-            "groupby": ["stack", "grpId"],
-            "fields": ["size"],
-            "ops": ["sum"],
-            "as": ["total"]
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "Japan",
+            "Year": "2011"
           },
-          {
-            "type": "stack",
-            "groupby": ["stack"],
-            "sort": {"field": "grpId", "order": "descending"},
-            "field": "total"
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "Germany",
+            "Year": "2007"
           },
-          {"type": "formula", "expr": "scale('y', datum.y0)", "as": "scaledY0"},
-          {"type": "formula", "expr": "scale('y', datum.y1)", "as": "scaledY1"},
-          {
-            "type": "formula",
-            "expr": "datum.stack == 'Team'",
-            "as": "rightLabel"
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "Germany",
+            "Year": "2003"
           },
-          {
-            "type": "formula",
-            "expr": "datum.total/domain('y')[1]",
-            "as": "percentage"
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "United States of America",
+            "Year": "1999"
+          },
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "Norway",
+            "Year": "1995"
+          },
+          "size": 1
+        },
+        {
+          "key": {
+            "Team": "United States of America",
+            "Year": "1991"
+          },
+          "size": 1
+        }
+      ],
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.key.Team",
+          "as": "Team"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.key.Year",
+          "as": "Year"
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "source": "rawData",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!groupSelector || groupSelector.Team == datum.Team || groupSelector.Year == datum.Year"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.Team+datum.Year",
+          "as": "key"
+        },
+        {
+          "type": "fold",
+          "fields": [
+            "Team",
+            "Year"
+          ],
+          "as": [
+            "stack",
+            "grpId"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.stack == 'Team' ? datum.Team+' '+datum.Year : datum.Year+' '+datum.Team",
+          "as": "sortField"
+        },
+        {
+          "type": "stack",
+          "groupby": [
+            "stack"
+          ],
+          "sort": {
+            "field": "sortField",
+            "order": "descending"
+          },
+          "field": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "(datum.y0+datum.y1)/2",
+          "as": "yc"
+        }
+      ]
+    },
+    {
+      "name": "groups",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "stack",
+            "grpId"
+          ],
+          "fields": [
+            "size"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        },
+        {
+          "type": "stack",
+          "groupby": [
+            "stack"
+          ],
+          "sort": {
+            "field": "grpId",
+            "order": "descending"
+          },
+          "field": "total"
+        },
+        {
+          "type": "formula",
+          "expr": "scale('y', datum.y0)",
+          "as": "scaledY0"
+        },
+        {
+          "type": "formula",
+          "expr": "scale('y', datum.y1)",
+          "as": "scaledY1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.stack == 'Team'",
+          "as": "rightLabel"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.total/domain('y')[1]",
+          "as": "percentage"
+        }
+      ]
+    },
+    {
+      "name": "destinationNodes",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.stack == 'Year'"
+        }
+      ]
+    },
+    {
+      "name": "edges",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.stack == 'Team'"
+        },
+        {
+          "type": "lookup",
+          "from": "destinationNodes",
+          "key": "key",
+          "fields": [
+            "key"
+          ],
+          "as": [
+            "target"
+          ]
+        },
+        {
+          "type": "linkpath",
+          "orient": "horizontal",
+          "shape": "diagonal",
+          "sourceY": {
+            "expr": "scale('y', datum.yc)"
+          },
+          "sourceX": {
+            "expr": "scale('x', 'Team') + bandwidth('x')"
+          },
+          "targetY": {
+            "expr": "scale('y', datum.target.yc)"
+          },
+          "targetX": {
+            "expr": "scale('x', 'Year')"
           }
-        ]
-      },
-      {
-        "name": "destinationNodes",
-        "source": "nodes",
-        "transform": [{"type": "filter", "expr": "datum.stack == 'Year'"}]
-      },
-      {
-        "name": "edges",
-        "source": "nodes",
-        "transform": [
-          {"type": "filter", "expr": "datum.stack == 'Team'"},
-          {
-            "type": "lookup",
-            "from": "destinationNodes",
-            "key": "key",
-            "fields": ["key"],
-            "as": ["target"]
-          },
-          {
-            "type": "linkpath",
-            "orient": "horizontal",
-            "shape": "diagonal",
-            "sourceY": {"expr": "scale('y', datum.yc)"},
-            "sourceX": {"expr": "scale('x', 'Team') + bandwidth('x')"},
-            "targetY": {"expr": "scale('y', datum.target.yc)"},
-            "targetX": {"expr": "scale('x', 'Year')"}
-          },
-          {
-            "type": "formula",
-            "expr": "range('y')[0]-scale('y', datum.size)",
-            "as": "strokeWidth"
-          },
-          {
-            "type": "formula",
-            "expr": "datum.size/domain('y')[1]",
-            "as": "percentage"
-          }
-        ]
+        },
+        {
+          "type": "formula",
+          "expr": "range('y')[0]-scale('y', datum.size)",
+          "as": "strokeWidth"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.size/domain('y')[1]",
+          "as": "percentage"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "range": "width",
+      "domain": [
+        "Team",
+        "Year"
+      ],
+      "paddingOuter": 0.05,
+      "paddingInner": 0.95
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": "height",
+      "domain": {
+        "data": "nodes",
+        "field": "y1"
       }
-    ],
-    "scales": [
-      {
-        "name": "x",
-        "type": "band",
-        "range": "width",
-        "domain": ["Team", "Year"],
-        "paddingOuter": 0.05,
-        "paddingInner": 0.95
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "range": [
+        "#e41a1c",
+        "#377eb8",
+        "#4daf4a",
+        "#984ea3",
+        "#ff7f00",
+        "#e41a1c",
+        "#377eb8",
+        "#377eb8",
+        "#4daf4a",
+        "#984ea3",
+        "#984ea3",
+        "#377eb8",
+        "#ff7f00",
+        "#377eb8"
+      ],
+      "domain": [
+        "Spain",
+        "United States of America",
+        "Japan",
+        "Germany",
+        "Norway",
+        "2023",
+        "2019",
+        "2015",
+        "2011",
+        "2007",
+        "2003",
+        "1999",
+        "1995",
+        "1991"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "name": "edgeMark",
+      "from": {
+        "data": "edges"
       },
-      {
-        "name": "y",
-        "type": "linear",
-        "range": "height",
-        "domain": {"data": "nodes", "field": "y1"}
-      },
-      {
-        "name": "color",
-        "type": "ordinal",
-        "range": ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#e41a1c", "#377eb8", "#377eb8", "#4daf4a", "#984ea3", "#984ea3", "#377eb8", "#ff7f00", "#377eb8"],
-        "domain": ["Spain", "United States of America", "Japan", "Germany", "Norway", "2023", "2019", "2015", "2011", "2007", "2003", "1999", "1995", "1991"] 
-      }
-    ],
-  
-    "marks": [
-      {
-        "type": "path",
-        "name": "edgeMark",
-        "from": {"data": "edges"},
-      
-        "encode": {
-          "update": {
-            "stroke": [
-              {
-                "test": "groupSelector && groupSelector.stack=='Team'",
-                "scale": "color",
-                "field": "Year"
-              },
-              {"scale": "color", "field": "Team"}
-            ],
-            "strokeWidth": {"field": "strokeWidth"},
-            "path": {"field": "path"},
-            "strokeOpacity": {
+      "encode": {
+        "update": {
+          "stroke": [
+            {
+              "test": "groupSelector && groupSelector.stack=='Team'",
+              "scale": "color",
+              "field": "Year"
+            },
+            {
+              "scale": "color",
+              "field": "Team"
+            }
+          ],
+          "strokeWidth": {
+            "field": "strokeWidth"
+          },
+          "path": {
+            "field": "path"
+          },
+          "strokeOpacity": {
             "signal": "groupHover.Team === datum.Team || groupHover.Year === datum.Year ? 0.9 : 0.5"
           },
-            "tooltip": {
-              "signal": "datum.Team + ' won in ' + datum.Year"
-            }
-          },
-          "hover": {"strokeOpacity": {"value": 1}}
-        }
-      },
-      {
-        "type": "rect",
-        "name": "groupMark",
-        "from": {"data": "groups"},
-        "encode": {
-          "enter": {
-            "fill": {"scale": "color", "field": "grpId"},
-            "width": {"scale": "x", "band": 1}
-          },
-          "update": {
-            "x": {"scale": "x", "field": "stack"},
-            "y": {"field": "scaledY0"},
-            "y2": {"field": "scaledY1"},
-            "fillOpacity": {"signal": "groupHover.Team === datum.Team || groupHover.Year === datum.Year ? 0.9 : 0.5"}
-          },
-          "hover": {"fillOpacity": {"value": 1}}
-        }
-      },
-      {
-        "type": "text",
-        "from": {"data": "groups"},
-        "encode": {
-          "enter":{
-          "fill": {"value": "white"},
-          "fontSize": {"value": 15}
+          "tooltip": {
+            "signal": "datum.Team + ' won in ' + datum.Year"
+          }
         },
-          "update": {
-            "x": {
-              "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') +6 : -40)"
-            },
-            "yc": {"signal": "(datum.scaledY0 + datum.scaledY1)/2"},
-            "align": {"signal": "datum.left ? 'right' : 'left'"},
-            "fontWeight": {"value": "bold"},
-            "text": {
-              
-              "signal": "datum.grpId"
-            }
+        "hover": {
+          "strokeOpacity": {
+            "value": 1
           }
-         
         }
       }
-    ],
-    "signals": [
-      {
-        "name": "groupHover",
-        "value": {},
-        "on": [
-          {
-            "events": "@groupMark:mouseover",
-            "update": "{Year:datum.stack=='Year' && datum.grpId, Team:datum.stack=='Team' && datum.grpId}"
+    },
+    {
+      "type": "rect",
+      "name": "groupMark",
+      "from": {
+        "data": "groups"
+      },
+      "encode": {
+        "enter": {
+          "fill": {
+            "scale": "color",
+            "field": "grpId"
           },
-          {"events": "mouseout", "update": "{}"}
-        ]
-      },
-      {
-        "name": "groupSelector",
-        "value": false,
-        "on": [
-          
-          {
-            "events": [
-              {"type": "click", "markname": "groupReset"},
-              {"type": "dblclick"}
-            ],
-            "update": "false"
+          "width": {
+            "scale": "x",
+            "band": 1
           }
-        ]
+        },
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "stack"
+          },
+          "y": {
+            "field": "scaledY0"
+          },
+          "y2": {
+            "field": "scaledY1"
+          },
+          "fillOpacity": {
+            "signal": "groupHover.Team === datum.Team || groupHover.Year === datum.Year ? 0.9 : 0.5"
+          }
+        },
+        "hover": {
+          "fillOpacity": {
+            "value": 1
+          }
+        }
       }
-    ],
-    "config": {
-      "view": { "stroke": "transparent" },
-      "axisX": { "domain": false },
-      "axisY": { "domain": false },
-      "title": {"color": "white", "fontSize": 25, "dy":60},
-      "axis": {
-        "titleColor": "white" ,
-        "titleFontSize": 15,
-        "labelColor": "white",
-        "labelFontSize": 13,
-        "gridColor": "black"
-   
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "groups"
       },
-      "legend": { "titleColor": "white" ,
+      "encode": {
+        "enter": {
+          "fill": {
+            "value": "white"
+          },
+          "fontSize": {
+            "value": 15
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') +6 : -40)"
+          },
+          "yc": {
+            "signal": "(datum.scaledY0 + datum.scaledY1)/2"
+          },
+          "align": {
+            "signal": "datum.left ? 'right' : 'left'"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "text": {
+            "signal": "datum.grpId"
+          }
+        }
+      }
+    }
+  ],
+  "signals": [
+    {
+      "name": "groupHover",
+      "value": {},
+      "on": [
+        {
+          "events": "@groupMark:mouseover",
+          "update": "{Year:datum.stack=='Year' && datum.grpId, Team:datum.stack=='Team' && datum.grpId}"
+        },
+        {
+          "events": "mouseout",
+          "update": "{}"
+        }
+      ]
+    },
+    {
+      "name": "groupSelector",
+      "value": false,
+      "on": [
+        {
+          "events": [
+            {
+              "type": "click",
+              "markname": "groupReset"
+            },
+            {
+              "type": "dblclick"
+            }
+          ],
+          "update": "false"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axisX": {
+      "domain": false
+    },
+    "axisY": {
+      "domain": false
+    },
+    "title": {
+      "color": "white",
+      "fontSize": 25,
+      "dy": 60
+    },
+    "axis": {
+      "titleColor": "white",
       "titleFontSize": 15,
       "labelColor": "white",
-      "labelFontSize": 13}
-    
+      "labelFontSize": 13,
+      "gridColor": "black"
+    },
+    "legend": {
+      "titleColor": "white",
+      "titleFontSize": 15,
+      "labelColor": "white",
+      "labelFontSize": 13
     }
   }
-  
+}

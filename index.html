@@ -1,191 +1,264 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-  <title> FIFA Women's World Cup 1991-2023</title>
-  <link rel="icon" type="image/x-icon" href="t_icon.ico">
-
-</head>
-
-
-<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<body>
-
-
-  <h1>FIFA Women's World Cup 1991-2023</h1>
-  <!-- <img src="trophy.png" alt="FIFA World Cup trophy" class="centre"> -->
-  <div id="main">
-
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <h2>Background</h2>
-
-        <p>
-          The FIFA Women's World Cup is an international soccer tournament held every four years, featuring the world's
-          top female national teams. Established in 1991, the tournament has grown in popularity and significance,
-          showcasing the skill and athleticism of women in the sport. The competition has provided a platform for female
-          athletes to shine on the global stage and has contributed to the growth of women's soccer worldwide.
-        </p>
-
-        
-
-        <div id="heatmap"></div>
-        <br>
-        <h2>Goals </h2>
-        <p>
-          Every goal across each tournament can be seen in the scatter plot below. Click on the legend to filter by year. From the scatter plot we can see more matches took place in 2023 than any other year and very few goals have been scored in extra time, >90 minutes.
-        </p>
-        <div id="goal_scatter"></div>
-        <br>
-        <p>Throughout the history of the FIFA Women's World Cup, remarkable top scorers have emerged. Michelle Akers set
-          the stage in 1991 for the  <span style="color: #377eb8;">United States of America</span> with ten goals, a feat that has never been matched. <span style="color: #4daf4a;">Japan's</span>  Hinata Miyazawa top the top spot in 2023 with their five
-          goals.
-        </p>
-        <div id="bar"></div>
-        <p>As the number of matches per World Cup increases so has the number of goals scored. With the 2023 edition having the highest number of goals scored with 164 across 64 matches. Witht the first edition, in 1991 hvaing the lowest total goals scored.
-
-        </p>
-
-        <div id="combined_score"></div>
-     
-
-      </div>
-
-      <div class="pure-u-1-2">
-        <h2>Participation</h2>
-
-        <p>Over the years, the FIFA Women's World Cup has witnessed a significant increase in participation. Beginning
-          with just 12 teams, it has expanded to include 32 in 2023, representing nations from across the globe. The
-          <span style="color: #377eb8;">United States of America</span> has played the most matches at 53, with <span
-            style="color: #984ea3;">Germany</span> and Sweden tied for second at 47. Many countried
-          have yet to participate in a FIFA Women's World Cup.
-        </p>
-
-
-        <div id="map"></div>
-        <br>
-        <h2>Champions</h2>
-        <p>Over the span of the FIFA Women's World Cup from 1991 to 2023, there have been a number of champions. The
-          <span style="color: #377eb8;">United States of America</span>
-          asserted their dominance, clinching the title in 1991, 1999, 2015 and 2019. <span
-            style="color: #ff7f00;">Norway</span> celebrated a
-          victory in 1995, <span style="color: #984ea3;">Germany</span> became champions in both 2003 and 2007, and
-          <span style="color: #4daf4a;">Japan</span> stunned the world with their win in
-          2011. In 2023, <span style="color: #e41a1c;">Spain</span> took the title for the very first
-          time.
-        </p>
-
-        <div id="sankey"></div>
-        <h2>Goal Scoring</h2>
-        <p>
-          Before each match an expected score is determined based on previous results and rankings, however this expected score is not always accurate. With some teams, such as the Netherlans performing better than expected and others, like Portugal performing worse.
-          Some team performed exactly or very close to what was expected, such as Thailand.
-        </p>
-        <div id="goals_expected"></div>
-        <br>
-        <div id="avg_score"></div>
-       
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-  <h3>
-    <span style="text-align: center">
-    Created by Zoe Parkinson. Data source: &nbsp<a
-      href="https://www.kaggle.com/datasets/piterfm/football-fifa-womens-world-cup-1991-2023"> Football - FIFA Women's
-      World Cup, 1991 - 2023 </a> 
-  </span>
-</h3>
-  </div>
-
-
-
-
-
-
-  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
-  <script type="text/javascript">
-    // Reference your Vega-Lite specification file
-    var spec2 = "map.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#map', spec2, { "actions": false, "padding": 20 }).then(function (result) {
-    }).catch(console.error);
-
-    // Reference your Vega-Lite specification file
-    var spec2 = "heatmap.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#heatmap', spec2, { "actions": false, "padding": 20 }).then(function (result) {
-    }).catch(console.error);
-
-    var spec2 = "sankey.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#sankey', spec2, { "actions": false, "padding": -20 }).then(function (result) {
-    }).catch(console.error);
-
-    var spec2 = "bar.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#bar', spec2, { "actions": false, "padding": 20 }).then(function (result) {
-    }).catch(console.error);
-
-    var spec2 = "avg_score.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#avg_score', spec2, { "actions": false, "padding": 20 }).then(function (result) {
-    }).catch(console.error);
-
-
-
-    var spec2 = "combined_score.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#combined_score', spec2, { "actions": false, "padding": 20 }).then(function (result) {
-    }).catch(console.error);
-
-
-    var spec2 = "goal_scatter.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#goal_scatter', spec2, { "actions": false, "padding": 20 }).then(function (result) {
-    }).catch(console.error);
-
-
-    var spec2 = "goals_expected.json";
-
-    // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#goals_expected', spec2, { "actions": false, "padding": 20}).then(function (result) {
-    }).catch(console.error);
-
-
-
-
-  </script>
-
-</body>
-
+	<head>
+		<!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+		<title>FIFA Women's World Cup 1991-2023</title>
+		<link rel="icon" type="image/x-icon" href="t_icon.ico" />
+	</head>
+
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+		integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
+		crossorigin="anonymous"
+	/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<body>
+		<h1>FIFA Women's World Cup 1991-2023</h1>
+		<div id="main">
+			<div class="pure-g">
+				<div class="pure-u-1-2">
+					<h2>Background</h2>
+
+					<p>
+						The FIFA Women's World Cup is an
+						international soccer tournament
+						held every four years, featuring
+						the world's top female national
+						teams. Established in 1991, the
+						tournament has grown in
+						popularity and significance,
+						showcasing the skill and
+						athleticism of women in the
+						sport. The competition has
+						provided a platform for female
+						athletes to shine on the global
+						stage and has contributed to the
+						growth of women's soccer
+						worldwide.
+					</p>
+
+					<div id="heatmap"></div>
+					<br />
+					<h2>Goals</h2>
+					<p>
+						Every goal across each
+						tournament can be seen in the
+						scatter plot below. Click on the
+						legend to filter by year. From
+						the scatter plot we can see more
+						matches took place in 2023 than
+						any other year and very few
+						goals have been scored in extra
+						time, >90 minutes.
+					</p>
+					<div id="goal_scatter"></div>
+					<br />
+					<p>
+						Throughout the history of the
+						FIFA Women's World Cup,
+						remarkable top scorers have
+						emerged. Michelle Akers set the
+						stage in 1991 for the
+						<span style="color: #377eb8"
+							>United States of
+							America</span
+						>
+						with ten goals, a feat that has
+						never been matched.
+						<span style="color: #4daf4a"
+							>Japan's</span
+						>
+						Hinata Miyazawa top the top spot
+						in 2023 with their five goals.
+					</p>
+					<div id="top_scorer_bar"></div>
+					<p>
+						As the number of matches per
+						World Cup increases so has the
+						number of goals scored. With the
+						2023 edition having the highest
+						number of goals scored with 164
+						across 64 matches. Witht the
+						first edition, in 1991 hvaing
+						the lowest total goals scored.
+					</p>
+
+					<div id="combined_score"></div>
+				</div>
+
+				<div class="pure-u-1-2">
+					<h2>Participation</h2>
+
+					<p>
+						Over the years, the FIFA Women's
+						World Cup has witnessed a
+						significant increase in
+						participation. Beginning with
+						just 12 teams, it has expanded
+						to include 32 in 2023,
+						representing nations from across
+						the globe. The
+						<span style="color: #377eb8"
+							>United States of
+							America</span
+						>
+						has played the most matches at
+						53, with
+						<span style="color: #984ea3"
+							>Germany</span
+						>
+						and Sweden tied for second at
+						47. Many countried have yet to
+						participate in a FIFA Women's
+						World Cup.
+					</p>
+
+					<div id="map"></div>
+					<br />
+					<h2>Champions</h2>
+					<p>
+						Over the span of the FIFA
+						Women's World Cup from 1991 to
+						2023, there have been a number
+						of champions. The
+						<span style="color: #377eb8"
+							>United States of
+							America</span
+						>
+						asserted their dominance,
+						clinching the title in 1991,
+						1999, 2015 and 2019.
+						<span style="color: #ff7f00"
+							>Norway</span
+						>
+						celebrated a victory in 1995,
+						<span style="color: #984ea3"
+							>Germany</span
+						>
+						became champions in both 2003
+						and 2007, and
+						<span style="color: #4daf4a"
+							>Japan</span
+						>
+						stunned the world with their win
+						in 2011. In 2023,
+						<span style="color: #e41a1c"
+							>Spain</span
+						>
+						took the title for the very
+						first time.
+					</p>
+
+					<div id="sankey"></div>
+					<h2>Goal Scoring</h2>
+					<p>
+						Before each match an expected
+						score is determined based on
+						previous results and rankings,
+						however this expected score is
+						not always accurate. With some
+						teams, such as the Netherlans
+						performing better than expected
+						and others, like Portugal
+						performing worse. Some team
+						performed exactly or very close
+						to what was expected, such as
+						Thailand.
+					</p>
+					<div id="goals_expected"></div>
+					<br />
+					<div id="avg_score"></div>
+				</div>
+			</div>
+
+			<h3>
+				<span style="text-align: center">
+					Created by Zoe Parkinson. Data source:
+					&nbsp<a
+						href="https://www.kaggle.com/datasets/piterfm/football-fifa-womens-world-cup-1991-2023"
+					>
+						Football - FIFA Women's World
+						Cup, 1991 - 2023
+					</a>
+				</span>
+			</h3>
+		</div>
+
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles.css"
+			media="all"
+		/>
+		<script type="text/javascript">
+			var spec2 = "map.json";
+			vegaEmbed("#map", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "heatmap.json";
+			vegaEmbed("#heatmap", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "sankey.json";
+			vegaEmbed("#sankey", spec2, {
+				actions: false,
+				padding: -20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "top_scorer_bar.json";
+			vegaEmbed("#top_scorer_bar", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "avg_score.json";
+			vegaEmbed("#avg_score", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "combined_score.json";
+			vegaEmbed("#combined_score", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "goal_scatter.json";
+			vegaEmbed("#goal_scatter", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+
+			var spec2 = "goals_expected.json";
+			vegaEmbed("#goals_expected", spec2, {
+				actions: false,
+				padding: 20,
+			})
+				.then(function (result) {})
+				.catch(console.error);
+		</script>
+	</body>
 </html>

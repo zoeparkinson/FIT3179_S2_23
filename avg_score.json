@@ -3,21 +3,24 @@
 	"title": "Average score per game per World Cup",
 	"height": 400,
 	"width": "container",
-	
 	"data": {
 		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/totals_and_average_by_year.csv"
 	},
-	
-	  "encoding": {
-		"x": { "field": "Year", "type": "nominal" },
+	"encoding": {
+		"x": {
+			"field": "Year",
+			"type": "nominal"
+		},
 		"y": {
 			"field": "average_score_per_game",
 			"type": "quantitative",
 			"title": "Average score per game per year"
 		},
-
 		"tooltip": [
-			{ "field": "Year", "title": "Year" },
+			{
+				"field": "Year",
+				"title": "Year"
+			},
 			{
 				"field": "average_score_per_game",
 				"title": "Average goals per game"
@@ -35,52 +38,57 @@
 				}
 			},
 			"encoding": {
-				"color": { "value": "#0a8f01" }
+				"color": {
+					"value": "#0a8f01"
+				}
 			}
 		},
 		{
 			"mark": {
-			  "type": "text",
-			  "align": "right",
-			  "baseline": "bottom",
-			  "dx": 89,
-			  "dy": 24,
-			  "fontSize": 11,
-			  "fontWeight": "lighter",
-			  "color": "white"
-	
-			  
+				"type": "text",
+				"align": "right",
+				"baseline": "bottom",
+				"dx": 89,
+				"dy": 24,
+				"fontSize": 11,
+				"fontWeight": "lighter",
+				"color": "white"
 			},
 			"encoding": {
-			  "text": {"value":"2023 had the minumum average score"},
-			  
-			  "opacity": {
-				"condition": {
-				  "test": "datum.Year == 2023",
-				  "value": 1
+				"text": {
+					"value": "2023 had the minumum average score"
 				},
-				"value": 0
-			  }
+				"opacity": {
+					"condition": {
+						"test": "datum.Year == 2023",
+						"value": 1
+					},
+					"value": 0
+				}
 			}
 		}
-		
-
 	],
 	"config": {
 		"background": null,
-		"view": { "stroke": "transparent" },
-		"title": {"color": "white", "fontSize":25 },
-		"axis": {
-		  "titleColor": "white" ,
-		  "titleFontSize": 15,
-		  "labelColor": "white",
-		  "labelFontSize": 13,
-		  "gridColor": "#454242"
-	 
+		"view": {
+			"stroke": "transparent"
 		},
-		"legend": { "titleColor": "white" ,
-		"titleFontSize": 15,
-		"labelColor": "white",
-		"labelFontSize": 13}
-	  }
+		"title": {
+			"color": "white",
+			"fontSize": 25
+		},
+		"axis": {
+			"titleColor": "white",
+			"titleFontSize": 15,
+			"labelColor": "white",
+			"labelFontSize": 13,
+			"gridColor": "#454242"
+		},
+		"legend": {
+			"titleColor": "white",
+			"titleFontSize": 15,
+			"labelColor": "white",
+			"labelFontSize": 13
+		}
+	}
 }

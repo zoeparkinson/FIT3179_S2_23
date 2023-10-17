@@ -101,10 +101,6 @@ body {
 }
 
 #map {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	
 	justify-content: space-around;
 	display: flex;
@@ -119,23 +115,12 @@ body {
 }
 
 #heatmap {
-	/* top:10px;
-	bottom: 100px;  */
-	/* left: 200px;
-	right: 200px; */
-	/* justify-content: center; */
 	display: flex;
 	justify-content: center;
 	margin: -10px;
 
 	font-family: Arial, Helvetica, sans-serif;
 
-
-	/* background-color: rgba(255, 255, 255); */
-	
-	
-	/* height: 1000px;
-	width: 800px; */
 }
 
 #sankey {
@@ -150,11 +135,7 @@ body {
   }
   
 
-#bar {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
+#top_scorer_bar {
 	padding: 20px;
 	justify-content: space-around;
 	justify-content: center;
@@ -164,24 +145,14 @@ body {
 }
 
 #line {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	padding: 20px;
 	justify-content: left;
 
 	display: flex;
 	font-family: Arial, Helvetica, sans-serif;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
 #line_score {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	padding: 20px;
 	justify-content: space-around;
 	justify-content: center;
@@ -191,10 +162,6 @@ body {
 }
 
 #penalty_line {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	padding: 20px;
 	justify-content: space-around;
 	justify-content: center;
@@ -204,10 +171,6 @@ body {
 }
 
 #avg_score {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	padding: 20px;
 	justify-content: space-around;
 	justify-content: center;
@@ -218,10 +181,6 @@ body {
 }
 
 #combined_score {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	padding: 20px;
 	justify-content: space-around;
 	justify-content: center;
@@ -233,10 +192,6 @@ body {
 
 
 #goal_scatter {
-	/* top:10px;
-	bottom: 100px; 
-	left: 100px;
-	right: 400px; */
 	
 	justify-content: space-around;
 	justify-content: center;

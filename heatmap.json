@@ -5,77 +5,123 @@
 	"height": 800,
 	"background": null,
 	"data": {
-	  "url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/matches_id.csv"
+		"url": "https://raw.githubusercontent.com/zoeparkinson/FIT3179_S2_23/main/Data/matches_id.csv"
 	},
 	"transform": [
-	  {
-		"window": [{ "op": "row_number", "as": "MatchNumber" }],
-		"groupby": ["Year"]
-	  },
-	  { "calculate": "datum.MatchNumber - 1", "as": "MatchIndex" }
+		{
+			"window": [
+				{
+					"op": "row_number",
+					"as": "MatchNumber"
+				}
+			],
+			"groupby": [
+				"Year"
+			]
+		},
+		{
+			"calculate": "datum.MatchNumber - 1",
+			"as": "MatchIndex"
+		}
 	],
 	"layer": [
-	  {
-		"mark": { "type": "rect" },
-		"encoding": {
-		  "x": {
-			"field": "Year",
-			"timeUnit": "year",
-			"type": "ordinal",
-			"axis": { "title": "Year", "grid": false, "orient": "top" }
-			
-		  },
-		  "y": {
-			"field": "id",
-			"sort": "descending",
-			"type": "quantitative",
-			"axis": {
-			  "title": "Match number",
-			  "grid": false
-			  
+		{
+			"mark": {
+				"type": "rect"
+			},
+			"encoding": {
+				"x": {
+					"field": "Year",
+					"timeUnit": "year",
+					"type": "ordinal",
+					"axis": {
+						"title": "Year",
+						"grid": false,
+						"orient": "top"
+					}
+				},
+				"y": {
+					"field": "id",
+					"sort": "descending",
+					"type": "quantitative",
+					"axis": {
+						"title": "Match number",
+						"grid": false
+					}
+				},
+				"color": {
+					"field": "Attendance",
+					"type": "quantitative",
+					"scale": {
+						"type": "linear",
+						"domain": [
+							0,
+							91000
+						],
+						"range": [
+							"#ceedcc",
+							"#0a8f01"
+						]
+					},
+					"legend": {
+						"orient": "bottom"
+					}
+				},
+				"stroke": {
+					"value": "black"
+				},
+				"tooltip": [
+					{
+						"field": "home_team",
+						"title": "Home Team"
+					},
+					{
+						"field": "away_team",
+						"title": "Away Team"
+					},
+					{
+						"field": "Score",
+						"title": "Score"
+					},
+					{
+						"field": "Date",
+						"timeUnit": "yearmonthdate",
+						"title": "Date"
+					},
+					{
+						"field": "Attendance",
+						"title": "Attendance"
+					}
+				]
 			}
-			
-		  },
-		  "color": {
-			"field": "Attendance",
-			"type": "quantitative",
-			"scale": {
-				"type": "linear",
-				"domain": [0, 91000], 
-				"range": ["#ceedcc", "#0a8f01"] 
-			  },
-			"legend":{"orient": "bottom"}
-		  },
-		  "stroke": {"value": "black"},
-		  "tooltip": [
-			{ "field": "home_team", "title": "Home Team" },
-			{ "field": "away_team", "title": "Away Team" },
-			{ "field": "Score", "title": "Score" },
-			{ "field": "Date", "timeUnit": "yearmonthdate","title": "Date" },
-			{ "field": "Attendance", "title": "Attendance" }
-		  ]
 		}
-	  }
-	  
 	],
 	"config": {
-	  "view": { "stroke": "transparent" },
-	  "axisX": { "domain": false },
-	  "axisY": { "domain": false },
-	  "title": {"color": "white", "fontSize": 25},
-    "axis": {
-      "titleColor": "white" ,
-      "titleFontSize": 15,
-      "labelColor": "white",
-      "labelFontSize": 13,
-      "gridColor": "black"
- 
-    },
-    "legend": { "titleColor": "white" ,
-    "titleFontSize": 15,
-    "labelColor": "white",
-    "labelFontSize": 13}
-  
+		"view": {
+			"stroke": "transparent"
+		},
+		"axisX": {
+			"domain": false
+		},
+		"axisY": {
+			"domain": false
+		},
+		"title": {
+			"color": "white",
+			"fontSize": 25
+		},
+		"axis": {
+			"titleColor": "white",
+			"titleFontSize": 15,
+			"labelColor": "white",
+			"labelFontSize": 13,
+			"gridColor": "black"
+		},
+		"legend": {
+			"titleColor": "white",
+			"titleFontSize": 15,
+			"labelColor": "white",
+			"labelFontSize": 13
+		}
 	}
-  }
-  
+}
