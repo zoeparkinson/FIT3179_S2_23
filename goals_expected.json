@@ -245,11 +245,6 @@
               "format": ".2f"
             },
             {
-              "field": "Average expected score",
-              "title": "Average expected number goals scored",
-              "format": ".2f"
-            },
-            {
               "field": "difference",
               "title": "Difference",
               "format": ".2f"

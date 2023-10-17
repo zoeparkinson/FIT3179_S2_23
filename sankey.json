@@ -89,10 +89,7 @@
       "name": "nodes",
       "source": "rawData",
       "transform": [
-        {
-          "type": "filter",
-          "expr": "!groupSelector || groupSelector.Team == datum.Team || groupSelector.Year == datum.Year"
-        },
+
         {
           "type": "formula",
           "expr": "datum.Team+datum.Year",
@@ -312,11 +309,7 @@
       "encode": {
         "update": {
           "stroke": [
-            {
-              "test": "groupSelector && groupSelector.stack=='Team'",
-              "scale": "color",
-              "field": "Year"
-            },
+
             {
               "scale": "color",
               "field": "Team"
@@ -427,24 +420,6 @@
         {
           "events": "mouseout",
           "update": "{}"
-        }
-      ]
-    },
-    {
-      "name": "groupSelector",
-      "value": false,
-      "on": [
-        {
-          "events": [
-            {
-              "type": "click",
-              "markname": "groupReset"
-            },
-            {
-              "type": "dblclick"
-            }
-          ],
-          "update": "false"
         }
       ]
     }
