@@ -102,19 +102,19 @@
             "Year"
           ],
           "as": [
-            "stack",
-            "grpId"
+            "team_stack",
+            "year_id"
           ]
         },
         {
           "type": "formula",
-          "expr": "datum.stack == 'Team' ? datum.Team+' '+datum.Year : datum.Year+' '+datum.Team",
+          "expr": "datum.team_stack == 'Team' ? datum.Team+' '+datum.Year : datum.Year+' '+datum.Team",
           "as": "sortField"
         },
         {
           "type": "stack",
           "groupby": [
-            "stack"
+            "team_stack"
           ],
           "sort": {
             "field": "sortField",
@@ -136,8 +136,8 @@
         {
           "type": "aggregate",
           "groupby": [
-            "stack",
-            "grpId"
+            "team_stack",
+            "year_id"
           ],
           "fields": [
             "size"
@@ -152,10 +152,10 @@
         {
           "type": "stack",
           "groupby": [
-            "stack"
+            "team_stack"
           ],
           "sort": {
-            "field": "grpId",
+            "field": "year_id",
             "order": "descending"
           },
           "field": "total"
@@ -172,7 +172,7 @@
         },
         {
           "type": "formula",
-          "expr": "datum.stack == 'Team'",
+          "expr": "datum.team_stack == 'Team'",
           "as": "rightLabel"
         },
         {
@@ -188,7 +188,7 @@
       "transform": [
         {
           "type": "filter",
-          "expr": "datum.stack == 'Year'"
+          "expr": "datum.team_stack == 'Year'"
         }
       ]
     },
@@ -198,7 +198,7 @@
       "transform": [
         {
           "type": "filter",
-          "expr": "datum.stack == 'Team'"
+          "expr": "datum.team_stack == 'Team'"
         },
         {
           "type": "lookup",
@@ -345,7 +345,7 @@
         "enter": {
           "fill": {
             "scale": "color",
-            "field": "grpId"
+            "field": "year_id"
           },
           "width": {
             "scale": "x",
@@ -355,7 +355,7 @@
         "update": {
           "x": {
             "scale": "x",
-            "field": "stack"
+            "field": "team_stack"
           },
           "y": {
             "field": "scaledY0"
@@ -390,7 +390,7 @@
         },
         "update": {
           "x": {
-            "signal": "scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') +6 : -40)"
+            "signal": "scale('x', datum.team_stack) + (datum.rightLabel ? bandwidth('x') +6 : -40)"
           },
           "yc": {
             "signal": "(datum.scaledY0 + datum.scaledY1)/2"
@@ -402,7 +402,7 @@
             "value": "bold"
           },
           "text": {
-            "signal": "datum.grpId"
+            "signal": "datum.year_id"
           }
         }
       }
@@ -415,7 +415,7 @@
       "on": [
         {
           "events": "@groupMark:mouseover",
-          "update": "{Year:datum.stack=='Year' && datum.grpId, Team:datum.stack=='Team' && datum.grpId}"
+          "update": "{Year:datum.team_stack=='Year' && datum.year_id, Team:datum.team_stack=='Team' && datum.year_id}"
         },
         {
           "events": "mouseout",

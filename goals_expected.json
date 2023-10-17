@@ -282,7 +282,7 @@
     "title": {
       "color": "white",
       "fontSize": 25,
-      "dx": -25,
+      "dx":-20,
       "dy": -10
     },
     "axis": {

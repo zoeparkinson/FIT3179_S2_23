@@ -89,6 +89,10 @@
 						"title": "Date"
 					},
 					{
+						"field": "Host",
+						"title": "Host"
+					},
+					{
 						"field": "Attendance",
 						"title": "Attendance"
 					}
