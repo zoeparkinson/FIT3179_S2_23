@@ -242,7 +242,7 @@
       "view": { "stroke": "transparent" },
       "axisX": { "domain": false },
       "axisY": { "domain": false },
-      "title": {"color": "white", "fontSize": 25},
+      "title": {"color": "white", "fontSize": 25, "dy":60},
       "axis": {
         "titleColor": "white" ,
         "titleFontSize": 15,

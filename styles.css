@@ -113,6 +113,7 @@ body {
 
 	
 	padding-left: 20px;
+	margin-top: -15px;
 	
 	
 }
@@ -143,7 +144,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	font-family: Arial, Helvetica, sans-serif;
-	
+	margin-left: 80px;
 	
 	
   }
@@ -249,11 +250,7 @@ body {
 #goals_expected{
 	
 
-	justify-content: right;
-	padding-left: -800px;
-	align-items: right; 
-	align-self: right;
-	
+	margin-left: 80px;
 	
 	font-family: Arial, Helvetica, sans-serif;
 }

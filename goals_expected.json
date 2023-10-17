@@ -43,7 +43,8 @@
         "y": {
           "field": "team",
           "type": "nominal",
-          "title": "Team"
+          "title": {"value":"Team", "angle":59}
+          
         },
         "x": {
           "field": "Average score",
@@ -133,14 +134,14 @@
     
       "background": null,
       "axisX": { "domain": true},
-      "axisY": { "domain": true, "labelPadding":0, "titlePadding": -45},
+      "axisY": { "domain": true,  "titlePadding": -45, "titleY":{"value":-10}, "titleAngle":360, "titleX":{"value":-30} },
       "view": { "stroke": "transparent" },
-      "title": {"color": "white", "fontSize": 25, "dx":-25},
+      "title": {"color": "white", "fontSize": 25, "dx":-25, "dy":-10},
       "axis": {
         "titleColor": "white" ,
         "titleFontSize": 15,
         "labelColor": "white",
-        "labelFontSize": 13,
+        "labelFontSize": 10,
         "gridColor": "#454242"
    
       },
@@ -148,7 +149,8 @@
       "titleFontSize": 13,
       "labelColor": "white",
       "labelFontSize": 13,
-      "symbolLimit":70
+      "symbolLimit":70,
+      "padding":10
       
   }
   

@@ -35,7 +35,7 @@
           athletes to shine on the global stage and has contributed to the growth of women's soccer worldwide.
         </p>
 
-        <br>
+        
 
         <div id="heatmap"></div>
         <br>
@@ -144,7 +144,7 @@
     var spec2 = "sankey.json";
 
     // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#sankey', spec2, { "actions": false, "padding": 20 }).then(function (result) {
+    vegaEmbed('#sankey', spec2, { "actions": false, "padding": -20 }).then(function (result) {
     }).catch(console.error);
 
     var spec2 = "bar.json";
@@ -178,7 +178,7 @@
     var spec2 = "goals_expected.json";
 
     // Embed the Vega-Lite visualization in the "map" div
-    vegaEmbed('#goals_expected', spec2, { "actions": false, "padding": 20 }).then(function (result) {
+    vegaEmbed('#goals_expected', spec2, { "actions": false, "padding": 20}).then(function (result) {
     }).catch(console.error);
 
 
