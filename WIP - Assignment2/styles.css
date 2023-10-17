@@ -249,13 +249,12 @@ body {
 #goals_expected{
 	
 
-	justify-content: right;
-	padding-left: -800px;
-	align-items: right; 
-	align-self: right;
 	
+	padding-left: -900000px;
 	
+	margin: -6000px ;
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: aliceblue;
 }
 
 
